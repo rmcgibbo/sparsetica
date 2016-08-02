@@ -1,0 +1,38 @@
+@article{Walsh_PNAS99,
+	Author = {Walsh, Scott T. R. and Cheng, Hong and Bryson, James W. and Roder, Heinrich and DeGrado, William F.},
+	Doi = {10.1073/pnas.96.10.5486},
+	Eprint = {http://www.pnas.org/content/96/10/5486.full.pdf},
+	Journal = {Proc. Natl. Acad. Sci. U.S.A.},
+	Number = {10},
+	Pages = {5486-5491},
+	Title = {Solution structure and dynamics of a de novo designed three-helix bundle protein},
+	Url = {http://www.pnas.org/content/96/10/5486.abstract},
+	Volume = {96},
+	Year = {1999}
+}
+
+
+@article{Kubelka_COSB04,
+	Author = {Jan Kubelka and James Hofrichter and William A Eaton},
+	Issn = {0959-440X},
+	Journal = {Curr. Opin. Struct. Biol.},
+	Number = {1},
+	Pages = {76 - 88},
+	Title = {The protein folding `speed limit'},
+	Url = {http://www.sciencedirect.com/science/article/pii/S0959440X04000144},
+	Volume = {14},
+	Year = {2004}
+}
+
+@article{LindorffLarsen_Science11,
+	Author = {Lindorff-Larsen, Kresten and Piana, Stefano and Dror, Ron O. and Shaw, David E.},
+	Doi = {10.1126/science.1208351},
+	Eprint = {http://www.sciencemag.org/content/334/6055/517.full.pdf},
+	Journal = {Science},
+	Number = {6055},
+	Pages = {517-520},
+	Title = {How Fast-Folding Proteins Fold},
+	Url = {http://www.sciencemag.org/content/334/6055/517.abstract},
+	Volume = {334},
+	Year = {2011}
+}
