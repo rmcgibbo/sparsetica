@@ -163,7 +163,7 @@ A basic dimensional analysis argument and the constraint that $\int_\Omega \tild
 \label{eq:functionalform}
 \tilde{p}_t(x) = \mu(x) + f(t/\tau) \langle q| p_0 \rangle q(x) \mu(x),
 \end{align}
-for some non-random function, $f$, that is independent of $x$. Later on, we will show that $f$ is necessarily an exponential, $f(t/\tau)=e^{-t/\tau}$. For diffusion on a double well potential, a diagrammatic example of the family of predictions, $\tilde{p}_t$, that can be made given a particular choice of $q$ is shown in \cref{fig:eq1}.
+for some non-random function, $f$, that is independent of $x$. Later on, we will show that $f$ is necessarily an exponential, $f(t/\tau)=e^{-t/\tau}$. For diffusion on a double well potential, a diagrammatic example of the family of predictions, $\tilde{p}_t$, that can be made given a particular choice of $q$ is shown in \cref{fig:eq1}. \hl{[TODO: Reviewer 1 thinks (1) must be motivated more clearly, and discusses this extensively in the attached comments.]}
 
 Even with full knowledge of the Hamiltonian and equations of motion, this prediction will not be exact because the one-dimensional measurement, $\langle q | p_0 \rangle$, gives incomplete information about $p_0(x)$. We define the error in the prediction, $E_{p_0}[q]$, as the $\mu^{-1}$-weighted mean squared error,
 \begin{align}
@@ -177,7 +177,7 @@ E[q] &= \max_{p_0} E_{p_0}[q], \\
 q^* &= \argmin_q E[q]. \label{eq:defn}
 \end{align}
 
-The functional $E[q]$ thus measures how well the measurement of an arbitrary collective variable can be used to predict the future state of the system. We define the \emph{natural reaction coordinate}, $q^*$, as the minimizer of $E[q]$. It is, in this sense, the collective variable which is maximally informative about the system's dynamics.
+The functional $E[q]$ thus measures how well the measurement of an arbitrary collective variable can be used to predict the future state of the system. We define the \emph{natural reaction coordinate}, $q^*$, as the minimizer of $E[q]$. It is, in this sense, the collective variable which is maximally informative about the system's dynamics. \hl{[TODO: Reviewer 1 suggests that the maximum of $E[q]$ could be infinite; this is discussed in Reviewer 1 attachment. Furthermore, R1 doesn't see the connection between eqns. (4) and (18).]}
 
 \subsection{Alternative Definitions}
 
@@ -291,7 +291,7 @@ E_{u_0}[q] &=  \int_\Omega dx\; \mu(x) (u_t(x) - \tilde{u}_t(x))^2 \\
 &= || (\mathcal{T}(t) - \tilde{\mathcal{T}}(t)) \circ u_0 ||_\mu^2 \\
 E[q] &= \max_{u_0} || (\mathcal{T}(t) - \tilde{\mathcal{T}}(t)) \circ u_0 ||_\mu^2,
 \end{align}
-where the maximum is understood to be taken over properly normalized $u_0$, $||u_0||_\mu = 1$.
+where the maximum is understood to be taken over properly normalized $u_0$, $||u_0||_\mu = 1$. \hl{[TODO: R1 thinks the problem statement of (18) is finding the best approximation in operator norm to the transfer operator from a rank two operator, and that this has a known solution, i.e.~truncating the spectral expansion after the second term.]}
 
 Now, we prove by why $\psi_2 = \min_q E[q]$. Observe that for any $q$, there exists a function $v(x)$ in the span of the first three eigenfunctions of $\mathcal{T}$, $v=a_1 \psi_1+ a_2 \psi_2 + a_3 \psi_3$, which is normalized, $\langle v | v \rangle_\mu = 1$, and which is in the null space of $\tilde{\mathcal{T}}$, $\tilde{\mathcal{T}} \circ v = 0$.\footnote{To be concrete, set $a_1 = 0$, and choose $a_2$ and $a_3$ to satisfy $a_2 \langle \psi_2 | q \rangle_\mu  = - a_3 \langle \psi_3 | q \rangle_\mu$ and $a_2^2 + a_3^2 = 1$.} Since $E[q]$ is the maximum of $E_{\mu_0}[q]$ over all possible $\mu_0$, it also must be greater than the error incurred for this particular starting distribution, $\mu_0=v$. Thus,
 \begin{align}
@@ -371,7 +371,7 @@ The solution, $\mathbf{a}^*$, yielding the best approximation to $\psi_2$ in the
 
 The symmetric matrix, $\mathbf{C}(t)$, and positive-definite matrix, $\mathbf{\Sigma}$, have elements given by,
 \begin{align}
-    C_{ij}(t) &= \langle \chi_i | \mathcal{T}(t) \circ \chi_j  \rangle_\mu = \mathbb{E}\left[ \chi_i(X_t) \cdot \chi_i(X_0) \right] \\
+    C_{ij}(t) &= \langle \chi_i | \mathcal{T}(t) \circ \chi_j  \rangle_\mu = \mathbb{E}\left[ \chi_i(X_t) \cdot {\color{red}\chi_j(X_0)} \right] \\
     \Sigma_{ij} &= \langle \chi_i | \chi_j \rangle_\mu = \mathbb{E}\left[ \chi_i(X_0) \cdot \chi_j(X_0)\right],
 \end{align}
 where the expectations are understood to be taken over the stochastic process. As discussed in detail by \citet{schwantes2013improvements} and \citet{perez2013identification}, the matrix elements can be estimated by empirical averages over the snapshots in molecular dynamics trajectories. The matrix $\mathbf{C}(t)$ is a collection of time-lagged correlations between the basis functions, and $\mathbf{\Sigma}$ is a covariance matrix of the basis functions. In \cref{appendix:covariance}, we discuss the use of shrinkage estimators in approximating $\mathbf{\Sigma}$ from timeseries data.
@@ -394,7 +394,7 @@ Arguably the most natural sparsity-inducing regularizer would be the $\ell_0$ no
 
 However, both the $\ell_0$ and $\ell_1$ versions of \cref{eq:geneig} are unsuitable. As discussed by \citet{sriperumbudur2011majorization}, the addition of either an $\ell_0$ or $\ell_1$ penalty to the \cref{eq:geneig} objective leads to the intractable problem of maximizing a non-concave objective function. They considered an alternative relaxation of the $\ell_0$ penalty,
 \begin{align}
-    ||\mathbf{x}||_0 = \sum_{i=1}^p 1_{\{|x_i| \neq 0\}} = \lim_{\epsilon \rightarrow 0} \sum_{i=1}^p \frac{\log(1+|x_i|/\epsilon)}{\log(1+1/\epsilon)}.
+    ||\mathbf{x}||_0 = \sum_{i=1}^{\color{red}m} 1_{\{|x_i| \neq 0\}} = \lim_{\epsilon \rightarrow 0} \sum_{i=1}^{\color{red}m} \frac{\log(1+|x_i|/\epsilon)}{\log(1+1/\epsilon)}.
 \end{align}
 
 \begin{figure}
@@ -407,17 +407,19 @@ Choosing a fixed $\epsilon>0$ yields a regularizer that is concave (see \cref{fi
 \begin{align}
 \label{eq:sticaopt}
 \begin{split}
-\operatornamewithlimits{maximize}_\mathbf{x} \hspace{2em}& \mathbf{x}^T \mathbf{C} \mathbf{x} - \rho \sum_{i=1}^n \frac{\log(1+|x_i|/\epsilon)}{\log(1+\epsilon)} \\
+\operatornamewithlimits{maximize}_\mathbf{x} \hspace{2em}& \mathbf{x}^T \mathbf{C} \mathbf{x} - \rho \sum_{i=1}^{\color{red}m} \frac{\log(1+|x_i|/\epsilon)}{\log(1+\epsilon)} \\
 \text{ subject to} \hspace{2em}& \mathbf{x}^T \mathbf{\Sigma} \mathbf{x} \leq 1,
 \end{split}
 \end{align}
 where $\rho\geq0$ is the regularization strength. At $\rho=0$, the problem reduces to standard tICA. Larger values of $\rho$ will induce sparsity in the solution vectors.
 
-Investigating sparse generalized eigenvalue problems, \citet{sriperumbudur2011majorization} showed that \cref{alg:1} is a globally convergent method for solving \cref{eq:sticaopt}. The algorithm is iterative, and refines an initial guess. Each iteration requires solving \cref{eq:qcqp}, a quadratically-constrained quadratic program (QCQP).
+Investigating sparse generalized eigenvalue problems, \citet{sriperumbudur2011majorization} showed that \cref{alg:1} is a globally convergent method for solving \cref{eq:sticaopt}. The algorithm is iterative, and refines an initial guess. Each iteration requires solving \cref{eq:qcqp}, a quadratically-constrained quadratic program (QCQP). \hl{[TODO: define $\lambda_{min}$ and $\mathbf{D}(\mathbf{w}^{(l)})$]}
 
 \begin{algorithm}[H]
 \begin{algorithmic}
-\Require $\mathbf{C} \in \mathbb{S}^n, \mathbf{\Sigma} \in \mathbb{S}_{++}^n, \rho>0, \epsilon>0$
+%\Require $\mathbf{C} \in \mathbb{S}^n, \mathbf{\Sigma} \in \mathbb{S}_{++}^n, \rho>0, \epsilon>0$
+% beh
+\Require {\color{red}$\mathbf{C}$ is a $n \times n$ real symmetric matrix, $\mathbf{\Sigma}$ is a $n \times n$ positive \hl{[TODO: semidefinite?]} definite matrix,} $\rho>0$, $\epsilon>0$
 \State Choose $\tau > \max(0, -\lambda_{min}(\mathbf{C}))$, $\mathbf{x}^{(0)} \in \{\mathbf{x} : \mathbf{x}^T \mathbf{\Sigma} \mathbf{x} \leq 1 \}$
 \State $\rho_\epsilon = \rho / \log(1+\epsilon^{-1})$
 \While{not converged} \\
@@ -454,7 +456,7 @@ where $\mathbf{D}(\mathbf{w})$ is matrix with the vector $\mathbf{w}$ along the 
 \begin{align}
 g(\mathbf{z}) = \begin{cases} 0 &\text{ if } \mathbf{z}^T\mathbf{\Sigma} \mathbf{z} \leq 1 \\ \infty &\text{ otherwise,} \end{cases}
 \end{align}
-where $\mathbf{A}=\mathbf{B}=\mathbf{I}_n$, and $\mathbf{c}=0$. The ADMM algorithm, in so-called scaled form, consists of the following iterations.
+where $\mathbf{A}=\mathbf{B}=\mathbf{I}_n$, and $\mathbf{c}=0$. The ADMM algorithm, in so-called scaled form, consists of the following iterations. \hl{[TODO: Reviewer 1 says that in Eqn. 36 (pdf)/eq:zopt (tex), $\mathbf{z}^{(k)}$ should be $\mathbf{z}$.]}
 \begin{align}
 \mathbf{x}^{(k+1)} &= \argmin_\mathbf{x} \left(f(\mathbf{x}) + \frac{\varrho}{2}||\mathbf{x} - \mathbf{z}^{(k)} + \mathbf{u}^{(k)}||^2_2 \right) \label{eq:xopt}\\
 \mathbf{z}^{(k+1)} &= \argmin_\mathbf{z} \left(g(\mathbf{z}) + \frac{\varrho}{2}||\mathbf{x}^{(k+1)} - \mathbf{z}^{(k)} + \mathbf{u}^{(k)}||^2_2 \right) \label{eq:zopt} \\
@@ -583,11 +585,11 @@ Using these input features, we fit a sparse tICA model with $\rho=0.005$ and obs
 \caption{\label{fig:a3d} caption} %todo
 \end{figure*}
 
-Next we use the sparse tICA algorithm to elucidate a specific process; in this case, the folding of $\alpha$3D, a 73-residue three-helix bundle.\cite{Walsh_PNAS99, Kubelka_COSB04} We analyzed the $\alpha$-carbon trace of a 707 $\mu$s molecular dynamics dataset for $\alpha$3D generated by \citet{LindorffLarsen_Science11}. The protein folds and unfolds 12 times over the course of the simulations. We extracted all inter-residue $\alpha$-carbon distances (for all pairs separated by least two residues) from each frame for a total of 2485 distances. From these distances, we fit a sparse tICA model ($\rho$=0.5).
+{\color{red} Next we use the sparse tICA algorithm to elucidate a specific process; in this case, the folding of $\alpha$3D, a 73-residue three-helix bundle.\cite{Walsh_PNAS99, Kubelka_COSB04} We analyzed the $\alpha$-carbon trace of a 707 $\mu$s molecular dynamics dataset for $\alpha$3D generated by \citet{LindorffLarsen_Science11}. The protein folds and unfolds 12 times over the course of the simulations. We extracted all inter-residue $\alpha$-carbon distances (for all pairs separated by least two residues) from each frame for a total of 2485 distances. From these distances, we fit a sparse tICA model ($\rho$=0.5). }
 
-The first solution depends on just one feature: the distance between GLY 49 and GLU 52. These residues are close in the sequence and typically remain separated by about 9 $\AA$; however, they occasionally are found within 6 $\AA$ of each other. A plot of the GLY 49--GLU 52 distance superimposed over a plot of the conformation's root-mean-square deviation (RMSD) shows no obvious relationship between this contact distance and the folding process (Fig.~\ref{fig:a3d}a). However, trajectory events characterized by the shortening of the GLY 49--GLU 52 distance occur more rarely than folding events, and thus this contraction is the slowest process found by tICA. 
+{\color{red} The first solution depends on just one feature: the distance between GLY 49 and GLU 52. These residues are close in the sequence and typically remain separated by about 9 $\AA$; however, they occasionally are found within 6 $\AA$ of each other. A plot of the GLY 49--GLU 52 distance superimposed over a plot of the conformation's root-mean-square deviation (RMSD) shows no obvious relationship between this contact distance and the folding process (Fig.~\ref{fig:a3d}a). However, trajectory events characterized by the shortening of the GLY 49--GLU 52 distance occur more rarely than folding events, and thus this contraction is the slowest process found by tICA. }
 
-However, we want to utilize the sparse tICA algorithm specifically to investigate the folding process. The second solution isolates two residue contact pairs: GLU 32--ASP 65 and GLU 39--ARG 57. Both pairs contain residue contacts between the same two $\alpha$-helices. Fig.~\ref{fig:a3d}b shows a plot of the two contact distances comprising the second tIC superimposed with the conformation's RMSD. It is clear that both the GLU 32--ASP 65 and GLU 39--ARG 57 distances are closely related to whether the protein is folded or unfolded, and thus either distance is expected to be suitable to serve as a reaction coordinate for the folding of $\alpha$3d. Further analysis might be performed to determine whether the aligning of the two helices involved in the second tIC is the rate-limiting step of the folding proess.
+{\color{red} However, we want to utilize the sparse tICA algorithm specifically to investigate the folding process. The second solution isolates two residue contact pairs: GLU 32--ASP 65 and GLU 39--ARG 57. Both pairs contain residue contacts between the same two $\alpha$-helices. Fig.~\ref{fig:a3d}b shows a plot of the two contact distances comprising the second tIC superimposed with the conformation's RMSD. It is clear that both the GLU 32--ASP 65 and GLU 39--ARG 57 distances are closely related to whether the protein is folded or unfolded, and thus either distance is expected to be suitable to serve as a reaction coordinate for the folding of $\alpha$3d. Further analysis might be performed to determine whether the aligning of the two helices involved in the second tIC is the rate-limiting step of the folding proess. }
 
 \section{Conclusions}
 
@@ -598,7 +600,7 @@ We developed a practical new estimator that builds upon the tICA method for esti
 Application of this method to molecular dynamics simulations of a 2-fluorobiphenyl derivative and BPTI show that the approach can identify reaction coordinates for the slow dynamical processes in these data sets that are readily interpretable. In BPTI, we see that opening and hydration of the protein core is controlled by a flip of a single backbone $\phi$ angle at ARG 42.
 
 % beh
-When applying sparse tICA to folding simulations of $\alpha$3D, we find that the second tIC serves as a reaction coordinate for folding while the first tIC captures a seemingly unrelated, rare contraction of the distance between two residues close in the protein sequence. This example highlights that the desired reaction coordinate many not be the first (i.e.~slowest) solution to the algorithm. Furthermore, when the process corresponding to the first solution seems unrelated to the slowest process, it may indicate that the system dynamics have been insufficently sampled, or motivate inspection of the force field parameters related to the features controlling that process. 
+{\color{red} When applying sparse tICA to folding simulations of $\alpha$3D, we find that the second tIC serves as a reaction coordinate for folding while the first tIC captures a seemingly unrelated, rare contraction of the distance between two residues close in the protein sequence. This example highlights that the desired reaction coordinate many not be the first (i.e.~slowest) solution to the algorithm. Furthermore, when the process corresponding to the first solution seems unrelated to the slowest process, it may indicate that the system dynamics have been insufficently sampled, or motivate inspection of the force field parameters related to the features controlling that process. }
 
 We anticipate that this method will be useful for the analysis of today's large molecular dynamics data sets. An implementation of this estimator is available in the MSMBuilder software package at \url{http://msmbuilder.org/} under the GNU Lesser General Public License.
 
