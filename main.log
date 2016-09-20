@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.5.25)  18 SEP 2016 14:15
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.5.25)  20 SEP 2016 13:25
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1286,45 +1286,45 @@ Class revtex4-1 Info: Overriding \@LN@LLerror on input line 64.
  [1{/usr/local/texlive/2014/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 113.
+(hyperref)                removing `math shift' on input line 115.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\Omega' on input line 113.
+(hyperref)                removing `\Omega' on input line 115.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 113.
+(hyperref)                removing `math shift' on input line 115.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 113.
+(hyperref)                removing `math shift' on input line 115.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 113.
+(hyperref)                removing `math shift' on input line 115.
 
 [2] <doublewell-figure-crop.pdf, id=212, 768.8725pt x 387.4475pt>
 File: doublewell-figure-crop.pdf Graphic file (type pdf)
 
 <use doublewell-figure-crop.pdf>
-Package pdftex.def Info: doublewell-figure-crop.pdf used on input line 149.
+Package pdftex.def Info: doublewell-figure-crop.pdf used on input line 151.
 (pdftex.def)             Requested size: 408.00156pt x 205.6004pt.
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 157.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 159.
 
 
 (/usr/local/texlive/2014/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 157.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 159.
  [3]
-Underfull \hbox (badness 4779) in paragraph at lines 205--206
+Underfull \hbox (badness 4779) in paragraph at lines 207--208
 []\OT1/cmr/m/n/10 By de-sign, these al-go-rithms rest on the pre-
  []
 
 [4 <./doublewell-figure-crop.pdf>]
-Underfull \hbox (badness 1490) in paragraph at lines 228--228
+Underfull \hbox (badness 1490) in paragraph at lines 230--230
   [][][]\OT1/cmr/m/n/8 For ex-am-ple, if the un-der-ly-ing dy-nam-ics are over-
 damped
  []
@@ -1333,91 +1333,117 @@ damped
 File: 2d-potential-crop.pdf Graphic file (type pdf)
 
 <use 2d-potential-crop.pdf>
-Package pdftex.def Info: 2d-potential-crop.pdf used on input line 278.
+Package pdftex.def Info: 2d-potential-crop.pdf used on input line 280.
 (pdftex.def)             Requested size: 203.99689pt x 204.67517pt.
 
 <2d-potential-psi2-crop.pdf, id=353, 302.12875pt x 304.13625pt>
 File: 2d-potential-psi2-crop.pdf Graphic file (type pdf)
 
 <use 2d-potential-psi2-crop.pdf>
-Package pdftex.def Info: 2d-potential-psi2-crop.pdf used on input line 279.
+Package pdftex.def Info: 2d-potential-psi2-crop.pdf used on input line 281.
 (pdftex.def)             Requested size: 203.99689pt x 205.3527pt.
- [6] [7 <./2d-potential-crop.pdf> <./2d-potential-psi2-crop.pdf
+ [6]
+
+Package natbib Warning: Citation `Banushkina_JCP15' on page 7 undefined on inpu
+t line 338.
+
+[7 <./2d-potential-crop.pdf> <./2d-potential-psi2-crop.pdf
 
 pdfTeX warning: pdflatex (file ./2d-potential-psi2-crop.pdf): PDF inclusion: mu
 ltiple pdfs with page group included in a single page
->] [8] <regularizer.pdf, id=487, 433.62pt x 289.08pt>
+>]
+Underfull \hbox (badness 1527) in paragraph at lines 355--356
+[]\OT1/cmr/m/n/10 Markov state mod-els (MSMs) and []time-structure
+ []
+
+
+Underfull \hbox (badness 3058) in paragraph at lines 355--356
+\OT1/cmr/m/n/10 based in-de-pen-dent com-po-nent anal-y-sis (tICA)[] are
+ []
+
+
+Underfull \hbox (badness 4132) in paragraph at lines 355--356
+\OT1/cmr/m/n/10 two widely used ap-prox-i-ma-tors for $\OML/cmm/m/it/10  []$ \O
+T1/cmr/m/n/10 that can
+ []
+
+
+Underfull \hbox (badness 1552) in paragraph at lines 355--356
+\OT1/cmr/m/n/10 be pa-ram-e-ter-ized di-rectly from molec-u-lar dy-nam-ics
+ []
+
+[8] <regularizer.pdf, id=484, 433.62pt x 289.08pt>
 File: regularizer.pdf Graphic file (type pdf)
  <use regularizer.pdf>
-Package pdftex.def Info: regularizer.pdf used on input line 411.
+Package pdftex.def Info: regularizer.pdf used on input line 413.
 (pdftex.def)             Requested size: 255.0pt x 169.99992pt.
 
-Overfull \hbox (9.0pt too wide) in paragraph at lines 411--412
+Overfull \hbox (9.0pt too wide) in paragraph at lines 413--414
  [][] 
  []
 
 Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
-put line 442.
+put line 444.
 [9 <./regularizer.pdf>]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 480.
+(hyperref)                removing `math shift' on input line 482.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 480.
+(hyperref)                removing `math shift' on input line 482.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 505.
+(hyperref)                removing `math shift' on input line 507.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 505.
+(hyperref)                removing `math shift' on input line 507.
 
 [10] <bipehnyl-chemdraw-crop.pdf, id=580, 198.7425pt x 132.495pt>
 File: bipehnyl-chemdraw-crop.pdf Graphic file (type pdf)
 
 <use bipehnyl-chemdraw-crop.pdf>
-Package pdftex.def Info: bipehnyl-chemdraw-crop.pdf used on input line 541.
+Package pdftex.def Info: bipehnyl-chemdraw-crop.pdf used on input line 543.
 (pdftex.def)             Requested size: 101.99844pt x 68.00014pt.
 
 <tics-crop.pdf, id=581, 833.1125pt x 323.2075pt>
 File: tics-crop.pdf Graphic file (type pdf)
  <use tics-crop.pdf>
-Package pdftex.def Info: tics-crop.pdf used on input line 547.
+Package pdftex.def Info: tics-crop.pdf used on input line 549.
 (pdftex.def)             Requested size: 510.0pt x 197.8566pt.
 
 <von-mises-crop.pdf, id=590, 453.695pt x 235.88126pt>
 File: von-mises-crop.pdf Graphic file (type pdf)
  <use von-mises-crop.pdf>
-Package pdftex.def Info: von-mises-crop.pdf used on input line 565.
+Package pdftex.def Info: von-mises-crop.pdf used on input line 567.
 (pdftex.def)             Requested size: 255.0pt x 132.57849pt.
 
-Overfull \hbox (9.0pt too wide) in paragraph at lines 565--566
+Overfull \hbox (9.0pt too wide) in paragraph at lines 567--568
  [][] 
  []
 
 <arg42-phi-angle.png, id=591, 433.8609pt x 289.08pt>
 File: arg42-phi-angle.png Graphic file (type png)
  <use arg42-phi-angle.png>
-Package pdftex.def Info: arg42-phi-angle.png used on input line 570.
+Package pdftex.def Info: arg42-phi-angle.png used on input line 572.
 (pdftex.def)             Requested size: 255.0pt x 169.90288pt.
 
-Overfull \hbox (9.0pt too wide) in paragraph at lines 570--571
+Overfull \hbox (9.0pt too wide) in paragraph at lines 572--573
  [][] 
  []
 
 <near-native-2.pdf, id=594, 614.295pt x 794.97pt>
 File: near-native-2.pdf Graphic file (type pdf)
  <use near-native-2.pdf>
-Package pdftex.def Info: near-native-2.pdf used on input line 576.
+Package pdftex.def Info: near-native-2.pdf used on input line 578.
 (pdftex.def)             Requested size: 203.99689pt x 263.99062pt.
 
 <frame-33042-2.pdf, id=595, 614.295pt x 794.97pt>
 File: frame-33042-2.pdf Graphic file (type pdf)
  <use frame-33042-2.pdf>
-Package pdftex.def Info: frame-33042-2.pdf used on input line 577.
+Package pdftex.def Info: frame-33042-2.pdf used on input line 579.
 (pdftex.def)             Requested size: 203.99689pt x 263.99062pt.
 
 [11 <./bipehnyl-chemdraw-crop.pdf>] [12 <./tics-crop.pdf> <./von-mises-crop.pdf
@@ -1428,31 +1454,31 @@ dfs with page group included in a single page
 > <./arg42-phi-angle.png (PNG copy)>]
 
 LaTeX Warning: A float is stuck (cannot be placed); try class option [floatfix]
- on input line 586.
+ on input line 588.
 
 <a3d.pdf, id=685, 505.89pt x 325.215pt>
 File: a3d.pdf Graphic file (type pdf)
  <use a3d.pdf>
-Package pdftex.def Info: a3d.pdf used on input line 592.
+Package pdftex.def Info: a3d.pdf used on input line 594.
 (pdftex.def)             Requested size: 510.0pt x 327.8641pt.
 
 
 Package natbib Warning: Citation `Walsh_PNAS99' on page 13 undefined on input l
-ine 597.
+ine 599.
 
 
 Package natbib Warning: Citation `Kubelka_COSB04' on page 13 undefined on input
- line 597.
+ line 599.
 
 
 Package natbib Warning: Citation `LindorffLarsen_Science11' on page 13 undefine
-d on input line 597.
+d on input line 599.
 
 
-LaTeX Warning: Command \r invalid in math mode on input line 599.
+LaTeX Warning: Command \r invalid in math mode on input line 601.
 
 
-LaTeX Warning: Command \r invalid in math mode on input line 599.
+LaTeX Warning: Command \r invalid in math mode on input line 601.
 
 [13 <./near-native-2.pdf> <./frame-33042-2.pdf
 
@@ -1462,50 +1488,50 @@ fs with page group included in a single page
 fier (name{ALG@line.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.703 \State
+l.705 \State
              $\mathbf{w}, \mathbf{V} \gets \mathrm{eigs}(\mathbf{\Sigma})$ \...
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.2}) 
 has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.704 \State
+l.706 \State
              $\mathbf{c} \gets \mathbf{V}^T\mathbf{a}$pdfTeX warning (ext4): de
 stination with the same identifier (name{ALG@line.3}) has been already used, du
 plicate ignored
 <to be read again> 
                    \relax 
-l.705 \If
+l.707 \If
          {$\mathbf{c}^T\mathbf{D}(\mathbf{w})\mathbf{c} \leq 1$}pdfTeX warning 
 (ext4): destination with the same identifier (name{ALG@line.4}) has been alread
 y used, duplicate ignored
 <to be read again> 
                    \relax 
-l.706 \State
+l.708 \State
              \Return $\mathbf{a}$ \Comment{Trivial if $\mathbf{a}$ is inside...
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.5}) 
 has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.707 \Else
+l.709 \Else
            pdfTeX warning (ext4): destination with the same identifier (name{AL
 G@line.6}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.708     \State
+l.710     \State
                  $\mu^{(0)} \gets 1$pdfTeX warning (ext4): destination with the
  same identifier (name{ALG@line.7}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.709     \While
+l.711     \While
                 {not converged} \Comment{Newton's method}
 <runtime-performance.pdf, id=791, 433.62pt x 289.08pt>
 File: runtime-performance.pdf Graphic file (type pdf)
 
 <use runtime-performance.pdf>
-Package pdftex.def Info: runtime-performance.pdf used on input line 727.
+Package pdftex.def Info: runtime-performance.pdf used on input line 729.
 (pdftex.def)             Requested size: 255.0pt x 169.99992pt.
 
-Overfull \hbox (9.0pt too wide) in paragraph at lines 727--728
+Overfull \hbox (9.0pt too wide) in paragraph at lines 729--730
  [][] 
  []
 
@@ -1514,16 +1540,16 @@ Overfull \hbox (9.0pt too wide) in paragraph at lines 727--728
 Package natbib Warning: There were undefined citations.
 
 [18]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 736.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 738.
  (./main.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 736.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 736.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 738.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 738.
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 9A9A87EC5E00D8BE29239DCF2379823D;2368.
  ) 
 Here is how much of TeX's memory you used:
  27591 strings out of 493117
- 515803 string characters out of 6135433
+ 515811 string characters out of 6135433
  609840 words of memory out of 5000000
  30357 multiletter control sequences out of 15000+600000
  20128 words of font info for 76 fonts, out of 8000000 for 9000
@@ -1587,7 +1613,7 @@ msfonts/cm/cmti9.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/ams
 fonts/cm/cmtt10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsf
 onts/symbols/msbm10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/urw/ncn
 trsbk/uncr8a.pfb>
-Output written on main.pdf (18 pages, 2606747 bytes).
+Output written on main.pdf (18 pages, 2608342 bytes).
 PDF statistics:
  1171 PDF objects out of 1200 (max. 8388607)
  1028 compressed objects within 11 object streams

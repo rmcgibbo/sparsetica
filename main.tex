@@ -65,6 +65,8 @@
 \title{Identification of simple reaction coordinates from complex dynamics}
 \author{Robert T. McGibbon}
 %\email{rmcgibbo@gmail.com}
+\author{Brooke E. Husic}
+%\email{bhusic@stanford.edu}
 \author{Vijay S. Pande}
 %\email{pande@stanford.edu}
 \affiliation{Department of Chemistry, Stanford University, Stanford CA 94305, USA}
@@ -204,7 +206,7 @@ Most of the existing algorithms that identify physical reaction coordinates from
 
 By design, these algorithms rest on the pre-identification of the $A$ and $B$ states, and are not naturally suited to systems with more than two metastable states, although multiple-state extensions are available.\cite{rogal2008multiple} For the reasons discussed in \cref{sect:uniquely_dertmined}, we thus dispute the claim that the committor should be taken as the \emph{perfect} or \emph{exact} reaction coordinate.\cite{grunwald2009transition, ma2005automatic, peters2006obtaining, krivov2011numerical} The authors' experiences with large-scale simulations of protein folding and activation on Folding@Home have shown that it can be difficult to locate and precisely define these metastable states. This suggests that, for an important class of problems, the metastable states should be constructed from the output of some model, as opposed to being treated as a modelling input.\cite{shirts2000screen, voelz2010molecular, shukla2014activation} These considerations motivate our formulation of the natural reaction coordinate in a manner independent of the choice to label certain regions of phase space as $A$ or $B$.
 
-{\color{red}Another reaction coordinate definition worth mentioning is the second eigenfunction (and subset of following eigenfunctions) of a diffusion process.\cite{nadler2006diffusion} In this formulation, a map is created from sampled points in phase space by utilizing a geometric distance metric, where points that are close geometrically are expected to correspond to kinetically similar conformations. We first note that the diffusion map formulation requires infinite sampling in order to ensure that the geometric diffusion distance corresponds to the manifold on which the system's underlying dynaimcs occur. Second, it is noteworthy that results ascertained from diffusion maps are invariant to the time-indexing of trajectory frames; in other words, the duration of the path between any two conformations is not utilized for analysis. As a result, diffusion maps do not provide a straightforward way to estimate the timescale for a given eigenvector. In contrast, the natural reaction coordinate defined in this work yields a mathematical relationship between a dynamical process's eigenvector and its associated timescale, and thus directly provides kinetic information about the process.}
+{\color{red}Another reaction coordinate definition worth mentioning is the second eigenfunction (or the subset of leading eigenfunctions) of a diffusion process.\cite{nadler2006diffusion} In this formulation, a map is created from sampled points in phase space by utilizing a geometric distance metric, where points that are close geometrically are expected to correspond to kinetically similar conformations. We first note that the diffusion map formulation requires infinite sampling in order to ensure that the (geometric) diffusion distance corresponds to the manifold on which the system's underlying dynaimcs occur. Second, it is noteworthy that results ascertained from diffusion maps are invariant to the time-indexing of trajectory frames; in other words, the duration of the path between any two conformations is not utilized for analysis. As a result, diffusion maps do not provide a straightforward way to estimate the timescale for a given eigenvector. In contrast, the natural reaction coordinate defined in this work yields a mathematical relationship between a dynamical process's eigenvector and its associated timescale, and thus directly provides kinetic information about the process.}
 
 % For example, \citet{ma2005automatic} harvested conformations on reactive trajectories with TPS, measured approximate committor values by shooting trajectories from each conformation, and trained a neural network to predict these values using structural order parameters. More efficient methods using likelihood maximization have been developed.
 
@@ -215,7 +217,7 @@ By design, these algorithms rest on the pre-identification of the $A$ and $B$ st
 
 \section{A dominant eigenfunction is the natural reaction coordinate}
 \label{sect:natureal_reaction}
-In this section, we demonstrate that the natural reaction coordinate, as defined by the minimizer of \cref{eq:defn}, is the second leading eigenfunction of an integral operator associated with a system's Markovian dynamics in $\Omega$. For simplicity, we work here with a discrete-time Markov chain, $\{X_0, X_1, X_2, \ldots \}$, such as a typical all-atom MD simulation with a finite time step integrator, assuming only that the prediction interval $t$ is greater than 1 step (typically on the order of 2 fs). Afterwards, we note why the same results apply if the underlying dynamics are a continuous-time Markov process, and discuss the natural generalization to multiple reaction coordinates.
+In this section, we demonstrate that the {\color{red}(dominant)} natural reaction coordinate, as defined by the minimizer of \cref{eq:defn}, is the second leading eigenfunction of an integral operator associated with a system's Markovian dynamics in $\Omega$. For simplicity, we work here with a discrete-time Markov chain, $\{X_0, X_1, X_2, \ldots \}$, such as a typical all-atom MD simulation with a finite time step integrator, assuming only that the prediction interval $t$ is greater than 1 step (typically on the order of 2 fs). Afterwards, we note why the same results apply if the underlying dynamics are a continuous-time Markov process, and discuss the natural generalization to multiple reaction coordinates.
 
 We note that others have also used the term reaction coordinate for these eigenfunctions.\cite{nadler2006diffusion, rohrdanz2011determination}
 
@@ -230,14 +232,14 @@ where $B_\epsilon(y)$ is the open $\epsilon$-ball centered at $y$ with infinites
     p_{t+1}(y) &= \int_{\Omega} dx\; p_t(x) p(x, y).
 \end{align}
 
-By assumption, we consider only ergodic and reversible Markov processes. Ergodicicity is the property that there do not exist two or more regions of $\Omega$ that are dynamically disconnected. That is, the integrated transition density is strictly positive, $\int_{y \in A} p(x, y) > 0$ for all $x$ and all non-empty subsets of $\Omega$, $A$. The reversibility condition is that the Markov chain obeys a detailed balance equation with respect to its stationary measure, $\mu(x)$,
+By assumption, we consider only ergodic and reversible Markov processes. Ergodicity is the property that there do not exist two or more regions of $\Omega$ that are dynamically disconnected. That is, the integrated transition density is strictly positive, $\int_{y \in A} p(x, y) > 0$ for all $x$ and all non-empty subsets of $\Omega$, $A$. The reversibility condition is that the Markov chain obeys a detailed balance equation with respect to its stationary measure, $\mu(x)$,
 \begin{align}
     \mu(x) \cdot p(x, y) = \mu(y) \cdot p(y,x).
 \end{align}
 
 For molecular dynamics, $\mu(x)$ is the equilibrium distribution associated with the thermodynamic ensemble that the system is sampling, such as the Boltzmann distribution at constant temperature, and reversibility can be interpreted as a type of generalized symmetry on the function $p(x, y)$.
 
-The form of our maximally predictive projection formulation suggests that the reaction coordinate acts like a perturbation to the equilibrium distribution. This suggests that we consider the equations for the time evolution of a new function, $u_t(x) \equiv p_t(x)/\mu(x)$, which measures the same information as $p_t(x)$, but encoded the excess or depletion of probability in an ensemble with respect to the stationary distribution. Applying the Chapman-Kolmogorov equation to the time evolution of $u_t$, we have
+The form of our maximally predictive projection formulation suggests that the reaction coordinate acts like a perturbation to the equilibrium distribution. This suggests that we consider the equations for the time evolution of a new function, $u_t(x) \equiv p_t(x)/\mu(x)$, which measures the same information as $p_t(x)$, but encoded with the excess or depletion of probability in an ensemble with respect to the stationary distribution. Applying the Chapman-Kolmogorov equation to the time evolution of $u_t$, we have
 \begin{align}
     u_{t+1}(y) = \frac{1}{\mu(y)} \int_{\Omega} dx\; u_t(x) \mu(x) p(x, y).
 \end{align}
@@ -300,7 +302,7 @@ E_{u_0}[q] &=  \int_\Omega dx\; \mu(x) (u_t(x) - \tilde{u}_t(x))^2 \\
 &= || (\mathcal{T}(t) - \tilde{\mathcal{T}}(t)) \circ u_0 ||_\mu^2 \\
 E[q] &= \max_{u_0} || (\mathcal{T}(t) - \tilde{\mathcal{T}}(t)) \circ u_0 ||_\mu^2,
 \end{align}
-where the maximum is understood to be taken over properly normalized $u_0$, $||u_0||_\mu = 1$. \hl{[TODO: R1 thinks the problem statement of (18) is finding the best approximation in operator norm to the transfer operator from a rank two operator, and that this has a known solution, i.e.~truncating the spectral expansion after the second term.]}
+where the maximum is understood to be taken over properly normalized $u_0$, $||u_0||_\mu = 1$. \hl{[TODO: R1 thinks the problem statement of (18) is finding the best approximation in operator norm to the transfer operator from a rank two operator, and that this has a known solution, i.e.~truncating the spectral expansion after the second term. R1 also doesn't see how this relates to Eqn.~(4).]}
 
 Now, we prove by why $\psi_2 = \min_q E[q]$. Observe that for any $q$, there exists a function $v(x)$ in the span of the first three eigenfunctions of $\mathcal{T}$, $v=a_1 \psi_1+ a_2 \psi_2 + a_3 \psi_3$, which is normalized, $\langle v | v \rangle_\mu = 1$, and which is in the null space of $\tilde{\mathcal{T}}$, $\tilde{\mathcal{T}} \circ v = 0$.\footnote{To be concrete, set $a_1 = 0$, and choose $a_2$ and $a_3$ to satisfy $a_2 \langle \psi_2 | q \rangle_\mu  = - a_3 \langle \psi_3 | q \rangle_\mu$ and $a_2^2 + a_3^2 = 1$.} Since $E[q]$ is the maximum of $E_{\mu_0}[q]$ over all possible $\mu_0$, it also must be greater than the error incurred for this particular starting distribution, $\mu_0=v$. Thus,
 \begin{align}
@@ -313,7 +315,7 @@ where the third line only includes a sum up to $i=3$ because, by construction, $
 
 Interpreting this inequality, we see that the worst-case prediction error for any \emph{ansatz} reaction coordinate, $q$, is always greater than or equal to $\lambda_3^{2t}$. Furthermore, for the particular choice $q=\psi_2$ and $f(t/\tau)=\lambda_2^t$, the equality is achieved, $E[\psi_2] = \lambda_3^{2t}$.\footnote{To demonstrate that $E[\psi_2] = \lambda_3^{2t}$, note that for this choice of $q$ and $f(t/\tau)$, $\tilde{\mathcal{T}}(t)$ is equal to the sum of the first two terms in the spectral decomposition of $\mathcal{T}(t)$. The squared spectral norm of the difference between the two operators is the square of the largest eigenvalue of the difference operator. The first two eigenpairs having been subtracted out, the square of the largest remaining eigenvalue is $\lambda_3^{2t}$.} If we define $\tau \equiv -1/\ln \lambda_2$, we see also that $f(t/\tau)$ can be written as $f(t/\tau) = e^{-t/\tau}$. Therefore, $\psi_2$ is the natural reaction coordinate, the minimizer of $E[q]$.
 
-The reader may recall that this argument is equivalent to the Eckart-Young Theorem on the optimal low-rank approximation of a matrix.\cite{eckart1936approximation} For self-adjoint linear operators, the original result is by Schmidt.\cite{schmidt1907zur} See Courant and Hilbert (pp. 161),\cite{courant2008methods} and \citet{micchelli1971some} for further details.
+The reader may recall that this argument is equivalent to the Eckart-Young Theorem on the optimal low-rank approximation of a matrix.\cite{eckart1936approximation} For self-adjoint linear operators, the original result is by Schmidt.\cite{schmidt1907zur} See Courant and Hilbert (pp.~161),\cite{courant2008methods} and \citet{micchelli1971some} for further details.
 
 \subsection{Continuous-time Markov processes}
 
@@ -329,11 +331,11 @@ The set of eigenfunctions of $\mathcal{L}$ and $\mathcal{T}(t)$ are equivalent, 
 
 \subsection{Multiple reaction coordinates}
 \label{subsect:multiple_reaction_coordinates}
-One attractive property of this definition of the reaction coordinate is that it generalizes naturally to multiple orthogonal reaction coordinates ordered by timescale.
+One attractive property of this definition of the reaction coordinate is that it generalizes naturally to multiple orthogonal reaction coordinates ordered by timescale
 
 Recall that the maximally predictive projection criterion from \cref{subsect:Maximally_predictive} assumed that the approximation, $\tilde{p}_t$, was to be formed only from knowledge of the equilibrium distribution and the \emph{ansatz} reaction coordinate. The multiple coordinate generalization follows from modifying this criteria to assume knowledge of $\mu$ and the first $k-1$ eigenfunctions, $\mu$ and $\psi_2, \ldots, \psi_{k-1}$. Additionally, assume that the projection of the initial distribution onto each coordinate is available. Then, another application of the Eckart-Young Theorem shows that the maximally predictive remaining \emph{ansatz} coordinate is $\psi_{k}$. Multiple orthogonal natural reaction coordinates can thus be defined in a stepwise manner, and shown to be equal to the leading eigenfunctions, $\psi_2, \ldots, \psi_k$.
 
-Systems contains $k$ metastable states will have $k-1$ eigenfunctions whose associated eigenvalues are close to one, separated from the remaining eigenvalues by a so-called spectral gap.\cite{prinz2011markov}
+{\color{red}As an example, sufficiently long molecular dynamics simulations of protein folding might yield a dominant reaction coordinate that is associated with a \textit{trans-cis} transition as opposed to with the folding process.\cite{Banushkina_JCP15} In this case, the reaction coordinate of interest is expected to be the third transfer operator eigenfunction, $\psi_3$. In general, systems containing} $k$ metastable states will have $k-1$ eigenfunctions whose associated eigenvalues are close to one, separated from the remaining eigenvalues by a so-called spectral gap.\cite{prinz2011markov}
 
 \subsection{Two-dimensional example}
 In the left panel of \cref{fig:2dexample}, we show an example potential with two possible pathways between the dominant basins. The potential is given by the following expression,\cite{rhee2005onedimensional}
@@ -350,7 +352,7 @@ For Smoluchowski dynamics at $kT=5$ with a homogeneous diffusion constant, $D=1$
 
 \section{The tICA approximator}
 
-Markov state models (MSMs) and time-structure independent components analysis (tICA) are two widely used approximators for $\psi_2$ that can be parameterized directly from molecular dynamics trajectories.\cite{prinz2011markov, shukla2015markov, schwantes2013improvements, perez2013identification} Other popular estimators include diffusion maps and kernel tICA.\cite{nadler2006diffusion, coifman2008diffusion, rohrdanz2011determination, shwantes2015modeling, kim2015systematic}
+Markov state models (MSMs) and {\color{red}time-structure based independent component analysis (tICA)} are two widely used approximators for $\psi_2$ that can be parameterized directly from molecular dynamics trajectories.\cite{prinz2011markov, shukla2015markov, schwantes2013improvements, perez2013identification} Other popular estimators include diffusion maps and kernel tICA.\cite{nadler2006diffusion, coifman2008diffusion, rohrdanz2011determination, shwantes2015modeling, kim2015systematic}
 
 In the tICA method, the goal is to find the optimal variational approximation to $\psi_2$ using a linear combination of basis functions. These basis functions are generally structural order parameters that can be evaluated easily for each snapshot in a simulation, such as the distance between certain pairs of atoms or some nonlinear transformation thereof, torsion angles between quartets of atoms, or root-mean-squared deviations to certain landmark conformations.
 
@@ -395,7 +397,7 @@ The tICA method has one obvious drawback: the solution, our approximate natural 
 
 These same interpretability issues arise with numerous methods in machine learning and statistics. For example, in multivariate linear regression, a response variable is modeled as the linear combination of input variables. Interpretable models, with only a small number of non-zero coefficients, can be obtained using variable selection methods such as the lasso.\cite{tibshirani1996regression}
 
-In this section, we introduce a new \emph{sparse} approximator for $\psi_2$. The solution will share the same form as the tICA approximation, $q = \sum_{i} a_i \chi_i$, except that the vast majority of the expansion coefficients, $a_i$, will be zero.
+In this section, we introduce a new \emph{sparse} approximator for $\psi_2$. {\color{red}We note that this method extends to sparse approximators for each of the leading eigenfunctions, $\psi_2, \ldots, \psi_k$, but restrict the present discussion to $\psi_2$ for succinctness.} The solution will share the same form as the tICA approximation, $q = \sum_{i} a_i \chi_i$, except that the vast majority of the expansion coefficients, $a_i$, will be zero.
 
 One general approach for building sparsity-inducing estimators is to augment the objective function --- in our case, \cref{eq:geneig} --- with a regularization term that penalizes model complexity and steers the optimization towards solutions that fit the data well, but also remain simple. By scaling the strength of this term, the modeller can trade off between the two goals.
 
