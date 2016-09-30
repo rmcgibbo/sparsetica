@@ -172,9 +172,10 @@ A basic dimensional analysis argument and the constraint that $\int_\Omega \tild
 \tilde{p}_t(x) = \mu(x) + f(t/\tau) \langle q| p_0 \rangle q(x) \mu(x),
 \end{align}
 for some non-random function, $f$, that is independent of $x$.
-{\color{red}Later on, we will show that $f(t/\tau)=e^{-t/\tau}$, i.e.~the autocorrelation function of the \textit{ansatz} reaction coordinate $q$.}
+{\color{red}Later on, we will see that this choice is motivated by the spectral expansion of the integral operator associated with the ensemble dynamics and show that $f(t/\tau)=e^{-t/\tau}$, i.e.~the autocorrelation function of the \textit{ansatz} reaction coordinate $q$.}
 %Later on, we will show that $f$ is necessarily an exponential, $f(t/\tau)=e^{-t/\tau}$.
-For diffusion on a double well potential, a diagrammatic example of the family of predictions, $\tilde{p}_t$, that can be made given a particular choice of $q$ is shown in \cref{fig:eq1}. \hl{[TODO: Reviewer 1 thinks (1) must be motivated more clearly, and discusses this extensively in the attached comments. My autocorrelation comment and softening of the original text addresses just some of this, and I'm not sure if it's sufficient.]}
+For diffusion on a double well potential, a diagrammatic example of the family of predictions, $\tilde{p}_t$, that can be made given a particular choice of $q$ is shown in \cref{fig:eq1}.
+%\hl{[TODO: Reviewer 1 thinks (1) must be motivated more clearly, and discusses this extensively in the attached comments. My autocorrelation comment and softening of the original text addresses just some of this, and I'm not sure if it's sufficient.]}
 
 Even with full knowledge of the Hamiltonian and equations of motion, this prediction will not be exact because the one-dimensional measurement, $\langle q | p_0 \rangle$, gives incomplete information about $p_0(x)$. We define the error in the prediction, $E_{p_0}[q]$, as the $\mu^{-1}$-weighted mean squared error,
 \begin{align}
@@ -188,7 +189,8 @@ E[q] &= \max_{p_0} E_{p_0}[q], \\
 q^* &= \argmin_q E[q]. \label{eq:defn}
 \end{align}
 
-The functional $E[q]$ thus measures how well the measurement of an arbitrary collective variable can be used to predict the future state of the system. We define the \emph{natural reaction coordinate}, $q^*$, as the minimizer of $E[q]$. It is, in this sense, the collective variable which is maximally informative about the system's dynamics. \hl{[TODO: Reviewer 1 suggests that the maximum of $E[q]$ could be infinite; this is discussed in Reviewer 1 attachment. It seems that in order to maintain the math of the rest of the paper, this exception should be acknowledged diplomatically (if we agree with it). Furthermore, R1 doesn't see the connection between eqns. (4) and (18).]}
+The functional $E[q]$ thus measures how well the measurement of an arbitrary collective variable can be used to predict the future state of the system. We define the \emph{natural reaction coordinate}, $q^*$, as the minimizer of $E[q]$. It is, in this sense, the collective variable which is maximally informative about the system's dynamics.
+%\hl{[TODO: Reviewer 1 suggests that the maximum of $E[q]$ could be infinite; this is discussed in Reviewer 1 attachment. It seems that in order to maintain the math of the rest of the paper, this exception should be acknowledged diplomatically (if we agree with it). Furthermore, R1 doesn't see the connection between eqns. (4) and (18).]}
 
 \subsection{Alternative Definitions}
 
@@ -595,7 +597,7 @@ Using these input features, we fit a sparse tICA model with $\rho=0.005$ and obs
 \centering
 \includegraphics[width=\textwidth]{a3d.pdf}
 \onecolumngrid
-\caption{\label{fig:a3d} {\color{red}(a) Superimposing a plot of the slowest sparse tICA solution, $\psi_2$, and the RMSD of the protein conformation to the folded structure shows that the inter-residue contact distance isolated by $\psi_2$ does not correspond to the folding of $\alpha$3D. (b) Superimposing a plot of the next sparse tICA solution, $\psi_3$, and the RMSD of the protein conformation to the folded structure shows that either inter-residue contact distance implicated in $\psi_3$ serves as a suitable reaction coordinate for folding. (c) The folded state of $\alpha$3D illustrating the residue pairs defining the contact distances retained in $\psi_2$ (violet) and $\psi_3$ (blue and cyan).} \hl{TODO (BEH): Update figure: better protein image, and change tICs to $\psi$s.}}
+\caption{\label{fig:a3d} {\color{red}(a) Superimposing a plot of the slowest sparse tICA solution, $\psi_2$, and the RMSD of the protein conformation to the folded structure shows that the inter-residue contact distance isolated by $\psi_2$ does not correspond to the folding of $\alpha$3D. (b) Superimposing a plot of the next sparse tICA solution, $\psi_3$, and the RMSD of the protein conformation to the folded structure shows that either inter-residue contact distance implicated in $\psi_3$ serves as a suitable reaction coordinate for folding. (c) The folded state of $\alpha$3D illustrating the residue pairs defining the contact distances retained in $\psi_2$ (violet) and $\psi_3$ (blue and cyan).}}
 \end{figure*}
 
 {\color{red} Next we use the sparse tICA algorithm to elucidate a specific process; in this case, the folding of $\alpha$3D, a 73-residue three-helix bundle.\cite{Walsh_PNAS99, Kubelka_COSB04} We analyzed the $\alpha$-carbon trace of a 707 $\mu$s molecular dynamics dataset for $\alpha$3D generated by \citet{LindorffLarsen_Science11}. The protein folds and unfolds 12 times over the course of the simulations. We extracted inter-residue $\alpha$-carbon distances for all pairs separated by least two residues from each frame for a total of 2485 distances. From these distances, we fit a sparse tICA model ($\rho$=0.5). }
