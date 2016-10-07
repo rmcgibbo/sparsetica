@@ -164,11 +164,10 @@ We now formalize this notion mathematically. To begin, we define the following q
 \item At some later time, $t>0$, the system will have evolved from $p_0$ to a new distribution over phase space, $p_t(x) : \Omega \rightarrow \mathbb{R}$, according to the underlying equations of motion for the dynamics. Note that while $p_t$ is a probability distribution, it is not a random variable; it is produced deterministically from $p_0$ and the system's equations of motion.
 \end{itemize}
 
-Now, consider the task of constructing an approximation to $p_t$. This approximation, $\tilde{p}_t$, is constrained to depend only on $\mu(x)$, $\tau$, $t$, $\langle q | p_0 \rangle$, {\color{red}$q(x)$, and the equilibrium mean and variance of $q$}. That is, given knowledge of the equilibrium distribution, the \emph{ansatz} reaction coordinate, its timescale, and \emph{no other} information about the current ensemble, $p_0$, beyond its projection onto the \emph{ansatz} reaction coordinate, our goal is to construct a prediction of the future ensemble at some later time $t$.
+Now, consider the task of constructing an approximation to $p_t$. This approximation, $\tilde{p}_t$, is constrained to depend only on $\mu(x)$, $\tau$, $t$, $\langle q | p_0 \rangle$, {\color{red}$q(x)$, and the equilibrium mean and variance of $q(x)$}. That is, given knowledge of the equilibrium distribution, the \emph{ansatz} reaction coordinate, its timescale, and \emph{no other} information about the current ensemble, $p_0$, beyond its projection onto the \emph{ansatz} reaction coordinate, our goal is to construct a prediction of the future ensemble at some later time $t$.
 
-%A basic dimensional analysis argument and
 % and unit variance
-The constraint that $\int_\Omega \tilde{p}_t=1$ is sufficient to establish that, assuming that $q$ is measured in a system of units such that it has mean zero in the equilibrium ensemble, the functional form of $\tilde{p}_t$ given $q$ must be{\color{red}
+A basic dimensional analysis argument and the constraint that $\int_\Omega \tilde{p}_t=1$ is sufficient to establish that, assuming that $q$ is measured in a system of units such that it has mean zero in the equilibrium ensemble, the functional form of $\tilde{p}_t$ given $q$ must be{\color{red}
 \begin{align}
 \label{eq:functionalform}
 \tilde{p}_t(x) = \mu(x) + f(t/\tau) \frac{\langle q| p_0 \rangle (q - \langle \mu| q \rangle)}{\langle \mu | q^2 \rangle} \mu(x),
@@ -209,21 +208,11 @@ A number of computational methods build approximations to the transition path en
 Most of the existing algorithms that identify physical reaction coordinates from molecular simulations are based on committor analysis or TPS.\cite{best2005reaction, ma2005automatic, peters2006obtaining, peters2007extensions, borrero2007reaction, peters2012inertial, peters2013reaction, peters2010peak} In the simplest version, one initializes a large collection of trajectories from isosurfaces of an \emph{ansatz} reaction coordinate and measures which of the two basins, $A$ or $B$, they commit to. If this coordinate is a good approximation to the committor, the measured splitting fraction will be narrowly peaked around the characteristic value.\cite{peters2006using} Criteria based on this observation can then be used to screen an \emph{ansatz} reaction coordinate, or optimize the parameters of a model for the reaction coordinate.\cite{ma2005automatic} More efficient maximum likelihood method which fit a parametric model for the reaction coordinate from TPS data further refine this approach.\cite{peters2007extensions, peters2012inertial}
 
 By design, these algorithms rest on the pre-identification of the $A$ and $B$ states are not naturally suited to systems with more than two metastable states, although multiple-state extensions are available.\cite{rogal2008multiple} 
-{\color{red}When these two states are both known \textit{a priori} and metastable, then we expect (but have not proven) that the committor function and the natural reaction coordinate are nearly equivalent. Algorithms that leverage this \textit{a priori} knowledge have the advantage of requiring significantly less sampling to converge their reaction coordinate estimators.
+{\color{red}When these two states are both known \textit{a priori} and metastable, then we expect, but have not proven, that the committor function and the natural reaction coordinate are nearly equivalent. Algorithms that leverage this \textit{a priori} knowledge have the advantage of requiring significantly less sampling to converge their reaction coordinate estimators.
 However, }for the reasons discussed in \cref{sect:uniquely_dertmined}, we dispute the claim that the committor should be taken as the \emph{perfect} or \emph{exact} reaction coordinate.\cite{grunwald2009transition, ma2005automatic, peters2006obtaining, krivov2011numerical} The authors' experiences with large-scale simulations of protein folding and activation on Folding@Home have shown that it can be difficult to locate and precisely define these metastable states. This suggests that, for an important class of problems, the metastable states should be constructed from the output of some model, as opposed to being treated as a modelling input.\cite{shirts2000screen, voelz2010molecular, shukla2014activation} These considerations motivate our formulation of the natural reaction coordinate in a manner independent of the choice to label certain regions of phase space as $A$ or $B$.
 
-We note that others have also defined a reaction coordinate consistent with the intuitive mathematical properties specified in Section~
+We note that others have also defined a reaction coordinate {\color{red}consistent with the intuitive mathematical properties specified in Section~\ref{subsect:Maximally_predictive}, such as the subset of leading eigenfunctions estimated by diffusion maps.\cite{nadler2006diffusion, rohrdanz2011determination, Boninsegna_JCTC15} In this formulation, a map is created from sampled points in phase space by utilizing a geometric distance metric, where points that are close geometrically are expected to correspond to kinetically similar conformations. The diffusion map formulation offers the same major advantages as the natural reaction coordinate, namely that it is a dimensionality reduction that does not require any information about the system beyond its dynamics, such as knowledge of metastable states. However, it is noteworthy that results ascertained from diffusion maps are invariant to the time-indexing of trajectory frames; in other words, the duration of the path between any two conformations does not inform the analysis. As a result, diffusion maps do not provide a straightforward way to estimate the timescale for a given eigenvector. In contrast, the natural reaction coordinate defined in this work yields a mathematical relationship between a dynamical process's eigenvector and its associated timescale, and thus directly provides kinetic information about the process.}
 
- In this formulation, a map is created from sampled points in phase space by utilizing a geometric distance metric, where points that are close geometrically are expected to correspond to kinetically similar conformations.
-
-
-{\color{red}Another reaction coordinate definition worth mentioning is the second eigenfunction (or the subset of leading eigenfunctions) estimated by diffusion maps.\cite{nadler2006diffusion} 
-% TODO
-A major advantage 
-... it can't be the most statistically efficient way to estimate the eigenfunctions when the trajectories come from unbiased MD.
-It is noteworthy that results ascertained from diffusion maps are invariant to the time-indexing of trajectory frames; in other words, the duration of the path between any two conformations is not utilized for analysis. As a result, diffusion maps do not provide a straightforward way to estimate the timescale for a given eigenvector. In contrast, the natural reaction coordinate defined in this work yields a mathematical relationship between a dynamical process's eigenvector and its associated timescale, and thus directly provides kinetic information about the process. cite cecilia and frank diffusion+tica paper}
-
-\hl{reword} We note that others have also used the term reaction coordinate for these eigenfunctions.\cite{nadler2006diffusion, rohrdanz2011determination, Boninsegna_JCTC15}
 
 % diffusion maps, MSMs, tICA, sparse tICA are all estimators for the same object. ours is better b/c direct kinetic info and sparsity
 
@@ -292,7 +281,7 @@ By repeatedly applying the single-step $\mathcal{T}(1)$ operator, we can also bu
 [\mathcal{T}(t) \circ u_t](x) = \sum_{i=1}^\infty \lambda_i^t \langle u_t | \psi_i \rangle_\mu \psi_i(x).
 \end{align}
 
-\subsection{Analysis of the error functional}
+{\color{red}\subsection{The error functional}}
 \label{subsect:analysis_of_the_error_function}
 
 \begin{figure*}
@@ -304,7 +293,7 @@ An example two-dimensional potential energy surface (left panel) with two of the
 \end{figure*}
 
 \label{subsect:Analysis_of_the_error_functional}
-We now apply this spectral decomposition of the transfer operator to the analysis of the error functional from \cref{subsect:Maximally_predictive} and prove why the natural reaction coordinate is equal to the second transfer operator eigenfunction, $q^* = \psi_2$.
+We now apply this spectral decomposition of the transfer operator to the analysis of the error functional from \cref{subsect:Maximally_predictive} and {\color{red}show that} the natural reaction coordinate is equal to the second transfer operator eigenfunction, $q^* = \psi_2$.
 
 %This spectral decomposition, \cref{eq:spectralT}, is the critical result of the prior subsection. We now apply it the analysis of the
 
@@ -314,30 +303,19 @@ First, observe that the form of the prediction about the future state of the sys
     &= \tilde{\mathcal{T}}(t) \circ u_0.
 \end{align}
 
-The approximate transfer operator, $\tilde{\mathcal{T}}(t)$, is rank 2; it has two non-zero eigenvalues, $1$ and $f(t/\tau)$, with associated eigenfunctions $1$ and $q(x)$ respectively.
+\noindent{}The approximate transfer operator, $\tilde{\mathcal{T}}(t)$, is rank 2; it has two non-zero eigenvalues, $1$ and $f(t/\tau)$, with associated eigenfunctions $1$ and $q(x)$ respectively.
 
 Next, we rewrite the error the error functional, \cref{eq:e_q0_q} in $u$-notation as well,
 \begin{align}
 E_{u_0}[q] &=  \int_\Omega dx\; \mu(x) (u_t(x) - \tilde{u}_t(x))^2 \\
 &= || (\mathcal{T}(t) - \tilde{\mathcal{T}}(t)) \circ u_0 ||_\mu^2 \\
+\label{eq:error_functional}
 E[q] &= \max_{u_0} || (\mathcal{T}(t) - \tilde{\mathcal{T}}(t)) \circ u_0 ||_\mu^2,
 \end{align}
-where the maximum is understood to be taken over properly normalized $u_0$, $||u_0||_\mu = 1$. \hl{[TODO: R1 thinks the problem statement of (18) is finding the best approximation in operator norm to the transfer operator from a rank two operator, and that this has a known solution, i.e.~truncating the spectral expansion after the second term. R1 also doesn't see how this relates to Eqn.~(4).]}
+where the maximum is understood to be taken over properly normalized $u_0$, $||u_0||_\mu = 1$. 
 
-\hl{move to appendix etc, for pedagogical purposes}
+{\color{red}It follows, and is proven in Appendix~\ref{appendix:error}, that $\psi_2 = \min_q E[q]$ and that $f(t/\tau)$ can be written as $f(t/\tau) = e^{-t/\tau}$. Because it is the minimizer of $E[q]$, $\psi_2$ is the natural reaction coordinate.}
 
-Now, we prove by why $\psi_2 = \min_q E[q]$. Observe that for any $q$, there exists a function $v(x)$ in the span of the first three eigenfunctions of $\mathcal{T}$, $v=a_1 \psi_1+ a_2 \psi_2 + a_3 \psi_3$, which is normalized, $\langle v | v \rangle_\mu = 1$, and which is in the null space of $\tilde{\mathcal{T}}$, $\tilde{\mathcal{T}} \circ v = 0$.\footnote{To be concrete, set $a_1 = 0$, and choose $a_2$ and $a_3$ to satisfy $a_2 \langle \psi_2 | q \rangle_\mu  = - a_3 \langle \psi_3 | q \rangle_\mu$ and $a_2^2 + a_3^2 = 1$.} Since $E[q]$ is the maximum of $E_{\mu_0}[q]$ over all possible $\mu_0$, it also must be greater than the error incurred for this particular starting distribution, $\mu_0=v$. Thus,
-\begin{align}
-E[q] &\geq || (\mathcal{T}(t) - \tilde{\mathcal{T}}(t)) \circ v ||_\mu^2 \\
-&= || \mathcal{T}(t) \circ v ||_\mu^2 \\
-&= \sum_{i=1}^3 \lambda_i^{2t} a_i^2 \\
-&\geq \lambda_3^{2t},
-\end{align}
-where the third line only includes a sum up to $i=3$ because, by construction, $v$ is in the span of the first three eigenfunctions. The final line follows because of the ordering of the eigenvalues and the normalization of $v$, implying $\sum_{i=1}^3 a_i^2 = 1$.
-
-Interpreting this inequality, we see that the worst-case prediction error for any \emph{ansatz} reaction coordinate, $q$, is always greater than or equal to $\lambda_3^{2t}$. Furthermore, for the particular choice $q=\psi_2$ and $f(t/\tau)=\lambda_2^t$, the equality is achieved, $E[\psi_2] = \lambda_3^{2t}$.\footnote{To demonstrate that $E[\psi_2] = \lambda_3^{2t}$, note that for this choice of $q$ and $f(t/\tau)$, $\tilde{\mathcal{T}}(t)$ is equal to the sum of the first two terms in the spectral decomposition of $\mathcal{T}(t)$. The squared spectral norm of the difference between the two operators is the square of the largest eigenvalue of the difference operator. The first two eigenpairs having been subtracted out, the square of the largest remaining eigenvalue is $\lambda_3^{2t}$.} If we define $\tau \equiv -1/\ln \lambda_2$, we see also that $f(t/\tau)$ can be written as $f(t/\tau) = e^{-t/\tau}$. Therefore, $\psi_2$ is the natural reaction coordinate, the minimizer of $E[q]$.
-
-The reader may recall that this argument is equivalent to the Eckart-Young Theorem on the optimal low-rank approximation of a matrix.\cite{eckart1936approximation} For self-adjoint linear operators, the original result is by Schmidt.\cite{schmidt1907zur} See Courant and Hilbert (pp.~161),\cite{courant2008methods} and \citet{micchelli1971some} for further details.
 
 \subsection{Continuous-time Markov processes}
 
@@ -627,7 +605,7 @@ This slow dynamical process is intriguing but may be artifactual. Three plausibl
 % identifies a biological process that should be investigated - it's real in the biology but we don't understand the function
 % in all 3 cases it's not a problem with the algorithm it's telling us something about the system
 
-{\color{red} However, our intention is to use the sparse tICA algorithm to gain insight into the folding process. The second solution, $\psi_3$, isolates two residue contact pairs: GLU 32--ASP 65 and GLU 39--ARG 57. Both pairs contain residue contacts between the same two $\alpha$-helices. Fig.~\ref{fig:a3d}b shows a plot of the two contact distances comprising $\psi_3$ superimposed with the conformation's RMSD. It is clear that both the GLU 32--ASP 65 and GLU 39--ARG 57 distances serve as a sparse proxy for whether the protein is folded or unfolded. This analysis suggests that the formation of the tertiary contact between \hl{helix 1 and helix 2} identified by $\psi_3$ is the rate-limiting step of the folding process.}
+{\color{red} However, our intention is to use the sparse tICA algorithm to gain insight into the folding process. The second solution, $\psi_3$, isolates two residue contact pairs: GLU 32--ASP 65 and GLU 39--ARG 57. Both pairs contain residue contacts between the same two $\alpha$-helices. Fig.~\ref{fig:a3d}b shows a plot of the two contact distances comprising $\psi_3$ superimposed with the conformation's RMSD. It is clear that both the GLU 32--ASP 65 and GLU 39--ARG 57 distances serve as a sparse proxy for whether the protein is folded or unfolded. This analysis suggests that the formation of the tertiary contact between the two helices identified by $\psi_3$ is the rate-limiting step of the folding process.}
 
 %Further analysis might be performed to determine whether the aligning of the two helices involved in $\psi_3$ is the rate-limiting step of the folding process. }
 % , and thus either distance is expected to be suitable to serve as a reaction coordinate for the folding of $\alpha$3d
@@ -650,6 +628,24 @@ The authors thank Thomas J. Lane for helpful discussions made during the prepara
 %The authors thank Brooke Husic and Thomas J. Lane for helpful discussions made during the preparation of this manuscript,
 
 \appendix
+{\color{red}
+\section{Analysis of the error functional}
+\label{appendix:error}
+
+To prove by why $\psi_2 = \min_q E[q]$, (Eqn.~\ref{eq:error_functional})}, observe that for any $q$, there exists a function $v(x)$ in the span of the first three eigenfunctions of $\mathcal{T}$, $v=a_1 \psi_1+ a_2 \psi_2 + a_3 \psi_3$, which is normalized, $\langle v | v \rangle_\mu = 1$, and which is in the null space of $\tilde{\mathcal{T}}$, $\tilde{\mathcal{T}} \circ v = 0$.\footnote{To be concrete, set $a_1 = 0$, and choose $a_2$ and $a_3$ to satisfy $a_2 \langle \psi_2 | q \rangle_\mu  = - a_3 \langle \psi_3 | q \rangle_\mu$ and $a_2^2 + a_3^2 = 1$.} Since $E[q]$ is the maximum of $E_{\mu_0}[q]$ over all possible $\mu_0$, it also must be greater than the error incurred for this particular starting distribution, $\mu_0=v$. Thus,
+\begin{align}
+E[q] &\geq || (\mathcal{T}(t) - \tilde{\mathcal{T}}(t)) \circ v ||_\mu^2 \\
+&= || \mathcal{T}(t) \circ v ||_\mu^2 \\
+&= \sum_{i=1}^3 \lambda_i^{2t} a_i^2 \\
+&\geq \lambda_3^{2t},
+\end{align}
+where the third line only includes a sum up to $i=3$ because, by construction, $v$ is in the span of the first three eigenfunctions. The final line follows because of the ordering of the eigenvalues and the normalization of $v$, implying $\sum_{i=1}^3 a_i^2 = 1$.
+
+Interpreting this inequality, we see that the worst-case prediction error for any \emph{ansatz} reaction coordinate, $q$, is always greater than or equal to $\lambda_3^{2t}$. Furthermore, for the particular choice $q=\psi_2$ and $f(t/\tau)=\lambda_2^t$, the equality is achieved, $E[\psi_2] = \lambda_3^{2t}$.\footnote{To demonstrate that $E[\psi_2] = \lambda_3^{2t}$, note that for this choice of $q$ and $f(t/\tau)$, $\tilde{\mathcal{T}}(t)$ is equal to the sum of the first two terms in the spectral decomposition of $\mathcal{T}(t)$. The squared spectral norm of the difference between the two operators is the square of the largest eigenvalue of the difference operator. The first two eigenpairs having been subtracted out, the square of the largest remaining eigenvalue is $\lambda_3^{2t}$.} If we define $\tau \equiv -1/\ln \lambda_2$, $f(t/\tau)$ can be written as $f(t/\tau) = e^{-t/\tau}$. Therefore $\psi_2$ is the natural reaction coordinate, the minimizer of $E[q]$.
+
+The reader may recall that this argument is equivalent to the Eckart-Young Theorem on the optimal low-rank approximation of a matrix.\cite{eckart1936approximation} For self-adjoint linear operators, the original result is by Schmidt.\cite{schmidt1907zur} See Courant and Hilbert (pp.~161),\cite{courant2008methods} and \citet{micchelli1971some} for further details.
+
+
 \section{Covariance matrix estimation}
 \label{appendix:covariance}
 

@@ -590,17 +590,6 @@
   {\doibase 10.1016/j.acha.2005.07.004} {\bibfield  {journal} {\bibinfo
   {journal} {Appl. Comput. Harmon. Anal.}\ }\textbf {\bibinfo {volume} {21}},\
   \bibinfo {pages} {113 } (\bibinfo {year} {2006})}\BibitemShut {NoStop}%
-\bibitem [{\citenamefont {Boninsegna}\ \emph {et~al.}(2015)\citenamefont
-  {Boninsegna}, \citenamefont {Gobbo}, \citenamefont {No{\'e}},\ and\
-  \citenamefont {Clementi}}]{Boninsegna_JCTC15}%
-  \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {L.}~\bibnamefont
-  {Boninsegna}}, \bibinfo {author} {\bibfnamefont {G.}~\bibnamefont {Gobbo}},
-  \bibinfo {author} {\bibfnamefont {F.}~\bibnamefont {No{\'e}}}, \ and\
-  \bibinfo {author} {\bibfnamefont {C.}~\bibnamefont {Clementi}},\ }\href
-  {\doibase 10.1021/acs.jctc.5b00749} {\bibfield  {journal} {\bibinfo
-  {journal} {J. Chem. Theory Comput.}\ }\textbf {\bibinfo {volume} {11}},\
-  \bibinfo {pages} {5947} (\bibinfo {year} {2015})}\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Rohrdanz}\ \emph {et~al.}(2011)\citenamefont
   {Rohrdanz}, \citenamefont {Zheng}, \citenamefont {Maggioni},\ and\
   \citenamefont {Clementi}}]{rohrdanz2011determination}%
@@ -612,37 +601,17 @@
   {\doibase 10.1063/1.3569857} {\bibfield  {journal} {\bibinfo  {journal} {J.
   Chem. Phys.}\ }\textbf {\bibinfo {volume} {134}},\ \bibinfo {pages} {124116}
   (\bibinfo {year} {2011})}\BibitemShut {NoStop}%
-\bibitem [{\citenamefont {Eckart}\ and\ \citenamefont
-  {Young}(1936)}]{eckart1936approximation}%
+\bibitem [{\citenamefont {Boninsegna}\ \emph {et~al.}(2015)\citenamefont
+  {Boninsegna}, \citenamefont {Gobbo}, \citenamefont {No{\'e}},\ and\
+  \citenamefont {Clementi}}]{Boninsegna_JCTC15}%
   \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {C.}~\bibnamefont
-  {Eckart}}\ and\ \bibinfo {author} {\bibfnamefont {G.}~\bibnamefont {Young}},\
-  }\href {\doibase 10.1007/BF02288367} {\bibfield  {journal} {\bibinfo
-  {journal} {Psychometrika}\ }\textbf {\bibinfo {volume} {1}},\ \bibinfo
-  {pages} {211} (\bibinfo {year} {1936})}\BibitemShut {NoStop}%
-\bibitem [{\citenamefont {Schmidt}(1907)}]{schmidt1907zur}%
-  \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {E.}~\bibnamefont
-  {Schmidt}},\ }\href {\doibase 10.1007/BF01449770} {\bibfield  {journal}
-  {\bibinfo  {journal} {Math. Ann.}\ }\textbf {\bibinfo {volume} {63}},\
-  \bibinfo {pages} {433} (\bibinfo {year} {1907})}\BibitemShut {NoStop}%
-\bibitem [{\citenamefont {Courant}\ and\ \citenamefont
-  {Hilbert}(2008)}]{courant2008methods}%
-  \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {R.}~\bibnamefont
-  {Courant}}\ and\ \bibinfo {author} {\bibfnamefont {D.}~\bibnamefont
-  {Hilbert}},\ }\href {http://books.google.com/books?id=z3s4WnhEAbAC} {\emph
-  {\bibinfo {title} {Methods of Mathematical Physics Vol. 1}}}\ (\bibinfo
-  {publisher} {Wiley},\ \bibinfo {year} {2008})\BibitemShut {NoStop}%
-\bibitem [{\citenamefont {Micchelli}\ and\ \citenamefont
-  {Pinkus}(1978)}]{micchelli1971some}%
-  \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {C.~A.}\ \bibnamefont
-  {Micchelli}}\ and\ \bibinfo {author} {\bibfnamefont {A.}~\bibnamefont
-  {Pinkus}},\ }\href {\doibase 10.1016/0021-9045(78)90036-9} {\bibfield
-  {journal} {\bibinfo  {journal} {J. Approx. Theory}\ }\textbf {\bibinfo
-  {volume} {24}},\ \bibinfo {pages} {51} (\bibinfo {year} {1978})}\BibitemShut
-  {NoStop}%
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {L.}~\bibnamefont
+  {Boninsegna}}, \bibinfo {author} {\bibfnamefont {G.}~\bibnamefont {Gobbo}},
+  \bibinfo {author} {\bibfnamefont {F.}~\bibnamefont {No{\'e}}}, \ and\
+  \bibinfo {author} {\bibfnamefont {C.}~\bibnamefont {Clementi}},\ }\href
+  {\doibase 10.1021/acs.jctc.5b00749} {\bibfield  {journal} {\bibinfo
+  {journal} {J. Chem. Theory Comput.}\ }\textbf {\bibinfo {volume} {11}},\
+  \bibinfo {pages} {5947} (\bibinfo {year} {2015})}\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Prinz}\ \emph {et~al.}(2011)\citenamefont {Prinz},
   \citenamefont {Wu}, \citenamefont {Sarich}, \citenamefont {Keller},
   \citenamefont {Senne}, \citenamefont {Held}, \citenamefont {Chodera},
@@ -674,10 +643,10 @@
   \BibitemOpen
   \bibfield  {author} {\bibinfo {author} {\bibfnamefont {P.~V.}\ \bibnamefont
   {Banushkina}}\ and\ \bibinfo {author} {\bibfnamefont {S.~V.}\ \bibnamefont
-  {Krivov}},\ }\href {\doibase http://dx.doi.org/10.1063/1.4935180} {\bibfield
-  {journal} {\bibinfo  {journal} {J. Chem. Phys.}\ }\textbf {\bibinfo {volume}
-  {143}},\ \bibinfo {eid} {184108} (\bibinfo {year} {2015}),\
-  http://dx.doi.org/10.1063/1.4935180}\BibitemShut {NoStop}%
+  {Krivov}},\ }\href {\doibase 10.1063/1.4935180} {\bibfield  {journal}
+  {\bibinfo  {journal} {J. Chem. Phys.}\ }\textbf {\bibinfo {volume} {143}},\
+  \bibinfo {eid} {184108} (\bibinfo {year} {2015}),\
+  10.1063/1.4935180}\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Shukla}\ \emph {et~al.}(2015)\citenamefont {Shukla},
   \citenamefont {Hernández}, \citenamefont {Weber},\ and\ \citenamefont
   {Pande}}]{shukla2015markov}%
@@ -887,9 +856,9 @@
   {Cheng}}, \bibinfo {author} {\bibfnamefont {J.~W.}\ \bibnamefont {Bryson}},
   \bibinfo {author} {\bibfnamefont {H.}~\bibnamefont {Roder}}, \ and\ \bibinfo
   {author} {\bibfnamefont {W.~F.}\ \bibnamefont {DeGrado}},\ }\href {\doibase
-  10.1073/pnas.96.10.5486} {\bibfield  {journal} {\bibinfo  {journal} {Proc.
-  Natl. Acad. Sci.}\ }\textbf {\bibinfo {volume} {96}},\ \bibinfo {pages}
-  {5486} (\bibinfo {year} {1999})}\BibitemShut {NoStop}%
+  http://dx.doi.org/10.1073/pnas.96.10.5486} {\bibfield  {journal} {\bibinfo
+  {journal} {Proc. Natl. Acad. Sci.}\ }\textbf {\bibinfo {volume} {96}},\
+  \bibinfo {pages} {5486} (\bibinfo {year} {1999})}\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Kubelka}, \citenamefont {Hofrichter},\ and\
   \citenamefont {Eaton}(2004)}]{Kubelka_COSB04}%
   \BibitemOpen
@@ -908,9 +877,40 @@
   {Lindorff-Larsen}}, \bibinfo {author} {\bibfnamefont {S.}~\bibnamefont
   {Piana}}, \bibinfo {author} {\bibfnamefont {R.~O.}\ \bibnamefont {Dror}}, \
   and\ \bibinfo {author} {\bibfnamefont {D.~E.}\ \bibnamefont {Shaw}},\ }\href
-  {\doibase 10.1126/science.1208351} {\bibfield  {journal} {\bibinfo  {journal}
-  {Science}\ }\textbf {\bibinfo {volume} {334}},\ \bibinfo {pages} {517}
-  (\bibinfo {year} {2011})}\BibitemShut {NoStop}%
+  {\doibase 10.1016/j.sbi.2004.01.013} {\bibfield  {journal} {\bibinfo
+  {journal} {Science}\ }\textbf {\bibinfo {volume} {334}},\ \bibinfo {pages}
+  {517} (\bibinfo {year} {2011})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Eckart}\ and\ \citenamefont
+  {Young}(1936)}]{eckart1936approximation}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {C.}~\bibnamefont
+  {Eckart}}\ and\ \bibinfo {author} {\bibfnamefont {G.}~\bibnamefont {Young}},\
+  }\href {\doibase 10.1007/BF02288367} {\bibfield  {journal} {\bibinfo
+  {journal} {Psychometrika}\ }\textbf {\bibinfo {volume} {1}},\ \bibinfo
+  {pages} {211} (\bibinfo {year} {1936})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Schmidt}(1907)}]{schmidt1907zur}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {E.}~\bibnamefont
+  {Schmidt}},\ }\href {\doibase 10.1007/BF01449770} {\bibfield  {journal}
+  {\bibinfo  {journal} {Math. Ann.}\ }\textbf {\bibinfo {volume} {63}},\
+  \bibinfo {pages} {433} (\bibinfo {year} {1907})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Courant}\ and\ \citenamefont
+  {Hilbert}(2008)}]{courant2008methods}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {R.}~\bibnamefont
+  {Courant}}\ and\ \bibinfo {author} {\bibfnamefont {D.}~\bibnamefont
+  {Hilbert}},\ }\href {http://books.google.com/books?id=z3s4WnhEAbAC} {\emph
+  {\bibinfo {title} {Methods of Mathematical Physics Vol. 1}}}\ (\bibinfo
+  {publisher} {Wiley},\ \bibinfo {year} {2008})\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Micchelli}\ and\ \citenamefont
+  {Pinkus}(1978)}]{micchelli1971some}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {C.~A.}\ \bibnamefont
+  {Micchelli}}\ and\ \bibinfo {author} {\bibfnamefont {A.}~\bibnamefont
+  {Pinkus}},\ }\href {\doibase 10.1016/0021-9045(78)90036-9} {\bibfield
+  {journal} {\bibinfo  {journal} {J. Approx. Theory}\ }\textbf {\bibinfo
+  {volume} {24}},\ \bibinfo {pages} {51} (\bibinfo {year} {1978})}\BibitemShut
+  {NoStop}%
 \bibitem [{\citenamefont {Anderson}(1963)}]{anderson1963}%
   \BibitemOpen
   \bibfield  {author} {\bibinfo {author} {\bibfnamefont {T.~W.}\ \bibnamefont

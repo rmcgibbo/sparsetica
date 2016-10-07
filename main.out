@@ -8,7 +8,7 @@
 \BOOKMARK [2][-]{section*.8}{Alternative Definitions}{section*.4}% 8
 \BOOKMARK [1][-]{section*.9}{A dominant eigenfunction is the natural reaction coordinate}{section*.2}% 9
 \BOOKMARK [2][-]{section*.10}{Preliminaries}{section*.9}% 10
-\BOOKMARK [2][-]{section*.11}{Analysis of the error functional}{section*.9}% 11
+\BOOKMARK [2][-]{section*.11}{The error functional}{section*.9}% 11
 \BOOKMARK [2][-]{section*.12}{Continuous-time Markov processes}{section*.9}% 12
 \BOOKMARK [2][-]{section*.13}{Multiple reaction coordinates}{section*.9}% 13
 \BOOKMARK [2][-]{section*.14}{Two-dimensional example}{section*.9}% 14
@@ -25,7 +25,8 @@
 \BOOKMARK [2][-]{section*.25}{Folding of a three-helix bundle}{section*.22}% 25
 \BOOKMARK [1][-]{section*.26}{Conclusions}{section*.2}% 26
 \BOOKMARK [1][-]{section*.27}{Acknowledgments}{section*.2}% 27
-\BOOKMARK [1][-]{section*.28}{Covariance matrix estimation}{section*.2}% 28
-\BOOKMARK [1][-]{section*.29}{Projection of point onto an ellipsoid}{section*.2}% 29
-\BOOKMARK [1][-]{section*.30}{Runtime performance}{section*.2}% 30
-\BOOKMARK [1][-]{section*.31}{References}{section*.2}% 31
+\BOOKMARK [1][-]{section*.28}{Analysis of the error functional}{section*.2}% 28
+\BOOKMARK [1][-]{section*.29}{Covariance matrix estimation}{section*.2}% 29
+\BOOKMARK [1][-]{section*.30}{Projection of point onto an ellipsoid}{section*.2}% 30
+\BOOKMARK [1][-]{section*.31}{Runtime performance}{section*.2}% 31
+\BOOKMARK [1][-]{section*.32}{References}{section*.2}% 32
