@@ -6,7 +6,7 @@
 %Control: page (0) single
 %Control: year (1) truncated
 %Control: production of eprint (0) enabled
-\begin{thebibliography}{96}%
+\begin{thebibliography}{103}%
 \makeatletter
 \providecommand \@ifxundefined [1]{%
  \@ifx{#1\undefined}
@@ -590,6 +590,17 @@
   {\doibase 10.1016/j.acha.2005.07.004} {\bibfield  {journal} {\bibinfo
   {journal} {Appl. Comput. Harmon. Anal.}\ }\textbf {\bibinfo {volume} {21}},\
   \bibinfo {pages} {113 } (\bibinfo {year} {2006})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Boninsegna}\ \emph {et~al.}(2015)\citenamefont
+  {Boninsegna}, \citenamefont {Gobbo}, \citenamefont {No{\'e}},\ and\
+  \citenamefont {Clementi}}]{Boninsegna_JCTC15}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {L.}~\bibnamefont
+  {Boninsegna}}, \bibinfo {author} {\bibfnamefont {G.}~\bibnamefont {Gobbo}},
+  \bibinfo {author} {\bibfnamefont {F.}~\bibnamefont {No{\'e}}}, \ and\
+  \bibinfo {author} {\bibfnamefont {C.}~\bibnamefont {Clementi}},\ }\href
+  {\doibase 10.1021/acs.jctc.5b00749} {\bibfield  {journal} {\bibinfo
+  {journal} {J. Chem. Theory Comput.}\ }\textbf {\bibinfo {volume} {11}},\
+  \bibinfo {pages} {5947} (\bibinfo {year} {2015})}\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Rohrdanz}\ \emph {et~al.}(2011)\citenamefont
   {Rohrdanz}, \citenamefont {Zheng}, \citenamefont {Maggioni},\ and\
   \citenamefont {Clementi}}]{rohrdanz2011determination}%
@@ -649,6 +660,24 @@
   {No{\'e}}},\ }\href {\doibase 10.1063/1.3565032} {\bibfield  {journal}
   {\bibinfo  {journal} {J. Chem. Phys.}\ }\textbf {\bibinfo {volume} {134}},\
   \bibinfo {pages} {174105} (\bibinfo {year} {2011})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Wedemeyer}, \citenamefont {Welker},\ and\
+  \citenamefont {Scheraga}(2002)}]{Wedemeyer_Biochemistry02}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {W.~J.}\ \bibnamefont
+  {Wedemeyer}}, \bibinfo {author} {\bibfnamefont {E.}~\bibnamefont {Welker}}, \
+  and\ \bibinfo {author} {\bibfnamefont {H.~A.}\ \bibnamefont {Scheraga}},\
+  }\href {\doibase 10.1021/bi020574b} {\bibfield  {journal} {\bibinfo
+  {journal} {Biochemistry}\ }\textbf {\bibinfo {volume} {41}},\ \bibinfo
+  {pages} {14637} (\bibinfo {year} {2002})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Banushkina}\ and\ \citenamefont
+  {Krivov}(2015)}]{Banushkina_JCP15}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {P.~V.}\ \bibnamefont
+  {Banushkina}}\ and\ \bibinfo {author} {\bibfnamefont {S.~V.}\ \bibnamefont
+  {Krivov}},\ }\href {\doibase http://dx.doi.org/10.1063/1.4935180} {\bibfield
+  {journal} {\bibinfo  {journal} {J. Chem. Phys.}\ }\textbf {\bibinfo {volume}
+  {143}},\ \bibinfo {eid} {184108} (\bibinfo {year} {2015}),\
+  http://dx.doi.org/10.1063/1.4935180}\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Shukla}\ \emph {et~al.}(2015)\citenamefont {Shukla},
   \citenamefont {Hernández}, \citenamefont {Weber},\ and\ \citenamefont
   {Pande}}]{shukla2015markov}%
@@ -762,6 +791,12 @@
   10.1561/2200000016} {\bibfield  {journal} {\bibinfo  {journal} {Found. Trends
   Mach. Learn.}\ }\textbf {\bibinfo {volume} {3}},\ \bibinfo {pages} {1}
   (\bibinfo {year} {2011})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Rockafellar}(1970)}]{Rockafellar_Book70}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {R.~T.}\ \bibnamefont
+  {Rockafellar}},\ }\href@noop {} {\emph {\bibinfo {title} {Convex Analysis}}}\
+  (\bibinfo  {publisher} {Princeton University Press},\ \bibinfo {year}
+  {1970})\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Kiseliov}(1994)}]{kiseliov1994algorithms}%
   \BibitemOpen
   \bibfield  {author} {\bibinfo {author} {\bibfnamefont {Y.}~\bibnamefont
@@ -843,6 +878,39 @@
   10.1126/science.1187409} {\bibfield  {journal} {\bibinfo  {journal}
   {Science}\ }\textbf {\bibinfo {volume} {330}},\ \bibinfo {pages} {341}
   (\bibinfo {year} {2010})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Walsh}\ \emph {et~al.}(1999)\citenamefont {Walsh},
+  \citenamefont {Cheng}, \citenamefont {Bryson}, \citenamefont {Roder},\ and\
+  \citenamefont {DeGrado}}]{Walsh_PNAS99}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {S.~T.~R.}\
+  \bibnamefont {Walsh}}, \bibinfo {author} {\bibfnamefont {H.}~\bibnamefont
+  {Cheng}}, \bibinfo {author} {\bibfnamefont {J.~W.}\ \bibnamefont {Bryson}},
+  \bibinfo {author} {\bibfnamefont {H.}~\bibnamefont {Roder}}, \ and\ \bibinfo
+  {author} {\bibfnamefont {W.~F.}\ \bibnamefont {DeGrado}},\ }\href {\doibase
+  10.1073/pnas.96.10.5486} {\bibfield  {journal} {\bibinfo  {journal} {Proc.
+  Natl. Acad. Sci.}\ }\textbf {\bibinfo {volume} {96}},\ \bibinfo {pages}
+  {5486} (\bibinfo {year} {1999})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Kubelka}, \citenamefont {Hofrichter},\ and\
+  \citenamefont {Eaton}(2004)}]{Kubelka_COSB04}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {J.}~\bibnamefont
+  {Kubelka}}, \bibinfo {author} {\bibfnamefont {J.}~\bibnamefont {Hofrichter}},
+  \ and\ \bibinfo {author} {\bibfnamefont {W.~A.}\ \bibnamefont {Eaton}},\
+  }\href {\doibase http://dx.doi.org/10.1016/j.sbi.2004.01.013} {\bibfield
+  {journal} {\bibinfo  {journal} {Curr. Opin. Struct. Biol.}\ }\textbf
+  {\bibinfo {volume} {14}},\ \bibinfo {pages} {76 } (\bibinfo {year}
+  {2004})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Lindorff-Larsen}\ \emph {et~al.}(2011)\citenamefont
+  {Lindorff-Larsen}, \citenamefont {Piana}, \citenamefont {Dror},\ and\
+  \citenamefont {Shaw}}]{LindorffLarsen_Science11}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {K.}~\bibnamefont
+  {Lindorff-Larsen}}, \bibinfo {author} {\bibfnamefont {S.}~\bibnamefont
+  {Piana}}, \bibinfo {author} {\bibfnamefont {R.~O.}\ \bibnamefont {Dror}}, \
+  and\ \bibinfo {author} {\bibfnamefont {D.~E.}\ \bibnamefont {Shaw}},\ }\href
+  {\doibase 10.1126/science.1208351} {\bibfield  {journal} {\bibinfo  {journal}
+  {Science}\ }\textbf {\bibinfo {volume} {334}},\ \bibinfo {pages} {517}
+  (\bibinfo {year} {2011})}\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Anderson}(1963)}]{anderson1963}%
   \BibitemOpen
   \bibfield  {author} {\bibinfo {author} {\bibfnamefont {T.~W.}\ \bibnamefont
