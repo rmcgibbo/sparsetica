@@ -153,7 +153,7 @@ In our view, a formal defintion of the natural reaction coordinate should be uni
     \caption{\label{fig:eq1} Predictions, $\tilde{p}_t$, made by the natural reaction coordinate, $q^*$, for Smoluchowski diffusion on two-well potential, $U(x) = (x-1)^2(x+1)^2$ with a uniform diffusion constant, $D=1$. The upper left panel shows the stationary distribution, $\mu(x)$, and the lower left panel shows the natural reaction coordinate, $q^*$, which changes sign between the two metastable states. The main panel shows the family of possible predictions, $\tilde{p}_t$ that can be made by \cref{eq:functionalform} using this choice of $q$, indicating the variable partitioning of density between the two basins. For an arbitrary initial distribution, $p_0$, this coordinate minimizes the worst-case predictive error about the future ensemble $p_t$ given only knowledge of the current ensemble's projection onto $q$. As discussed in \cref{sect:natureal_reaction}, $q^*$ was calculated from the second eigenfunction of the Smoluchowski operator, which was determined in this case using the FiPy PDE solver.\cite{FiPy:2009}}
 \end{figure*}
 
-Finally, the key property that we use to define the natural reaction coordinate relates to its ability to optimally predict the dynamics. Of all possible one-dimensional measurements of the state of some high-dimensional dynamical system, the {\color{red}dominant} natural reaction coordinate should be the most informative about the future evolution of the system. This relates to the expectation, common in chemical kinetics, that the dynamics along the reaction coordinate are rate-limiting, and that all other degrees of freedom in the system equilibrate more rapidly. The maximally predictive single coordinate will measure progress with respect to the rate-limiting bottlenecks, as the orthogonal coordinates can more reliably be assumed to be at, or near, equilibrium. {\color{red}For the analysis of a system where a nondominant natural reaction coordinate is appropriate, see Section~\ref{sec:examples}.}
+Finally, the key property that we use to define the natural reaction coordinate relates to its ability to optimally predict the dynamics. Of all possible one-dimensional measurements of the state of some high-dimensional dynamical system, the natural reaction coordinate should be the most informative about the future evolution of the system. This relates to the expectation, common in chemical kinetics, that the dynamics along the reaction coordinate are rate-limiting, and that all other degrees of freedom in the system equilibrate more rapidly. The maximally predictive single coordinate will measure progress with respect to the rate-limiting bottlenecks, as the orthogonal coordinates can more reliably be assumed to be at, or near, equilibrium.
 
 We now formalize this notion mathematically. To begin, we define the following quantities:
 \begin{itemize}
@@ -164,18 +164,20 @@ We now formalize this notion mathematically. To begin, we define the following q
 \item At some later time, $t>0$, the system will have evolved from $p_0$ to a new distribution over phase space, $p_t(x) : \Omega \rightarrow \mathbb{R}$, according to the underlying equations of motion for the dynamics. Note that while $p_t$ is a probability distribution, it is not a random variable; it is produced deterministically from $p_0$ and the system's equations of motion.
 \end{itemize}
 
-Now, consider the task of constructing an approximation to $p_t$. This approximation, $\tilde{p}_t$, is constrained to depend only on $\mu(x)$, $q(x)$, $\tau$, $t$, and $\langle q | p_0 \rangle$. That is, given knowledge of the equilibrium distribution, the \emph{ansatz} reaction coordinate, its timescale, and \emph{no other} information about the current ensemble, $p_0$, beyond its projection onto the \emph{ansatz} reaction coordinate, our goal is to construct a prediction of the future ensemble at some later time $t$.
+Now, consider the task of constructing an approximation to $p_t$. This approximation, $\tilde{p}_t$, is constrained to depend only on $\mu(x)$, $\tau$, $t$, $\langle q | p_0 \rangle$, {\color{red}$q(x)$, and the equilibrium mean and variance of $q$}. That is, given knowledge of the equilibrium distribution, the \emph{ansatz} reaction coordinate, its timescale, and \emph{no other} information about the current ensemble, $p_0$, beyond its projection onto the \emph{ansatz} reaction coordinate, our goal is to construct a prediction of the future ensemble at some later time $t$.
 
-A basic dimensional analysis argument and the constraint that $\int_\Omega \tilde{p}_t=1$ is sufficient to establish that, assuming that $q$ is measured in a system of units such that it has mean zero and unit variance in the equilibrium ensemble, the functional form of $\tilde{p}_t$ given $q$ must be
+%A basic dimensional analysis argument and
+% and unit variance
+The constraint that $\int_\Omega \tilde{p}_t=1$ is sufficient to establish that, assuming that $q$ is measured in a system of units such that it has mean zero in the equilibrium ensemble, the functional form of $\tilde{p}_t$ given $q$ must be{\color{red}
 \begin{align}
 \label{eq:functionalform}
-\tilde{p}_t(x) = \mu(x) + f(t/\tau) \langle q| p_0 \rangle q(x) \mu(x),
+\tilde{p}_t(x) = \mu(x) + f(t/\tau) \frac{\langle q| p_0 \rangle (q - \langle \mu| q \rangle)}{\langle \mu | q^2 \rangle} \mu(x),
+%\tilde{p}_t(x) = \mu(x) + f(t/\tau,\langle q| p_0 \rangle) q(x) \mu(x),
 \end{align}
-for some non-random function, $f$, that is independent of $x$.
-{\color{red}Later on, we will see that this choice is motivated by the spectral expansion of the integral operator associated with the ensemble dynamics and show that $f(t/\tau)=e^{-t/\tau}$, i.e.~the autocorrelation function of the \textit{ansatz} reaction coordinate $q$.}
-%Later on, we will show that $f$ is necessarily an exponential, $f(t/\tau)=e^{-t/\tau}$.
+where $f$ is some non-random function that is independent of $x$ and $\langle q^2| p_0 \rangle$ is the variance of $q$.}
+%{\color{red}Later on, we will see that this choice is motivated by the spectral expansion of the integral operator associated with the ensemble dynamics and show that $f(t/\tau)=e^{-t/\tau}$, i.e.~the autocorrelation function of the \textit{ansatz} reaction coordinate $q$.}
+Later on, we will show that $\tilde{p}_t(x)$ is necessarily an exponential, $f(t/\tau)=e^{-t/\tau}$.
 For diffusion on a double well potential, a diagrammatic example of the family of predictions, $\tilde{p}_t$, that can be made given a particular choice of $q$ is shown in \cref{fig:eq1}.
-%\hl{[TODO: Reviewer 1 thinks (1) must be motivated more clearly, and discusses this extensively in the attached comments. My autocorrelation comment and softening of the original text addresses just some of this, and I'm not sure if it's sufficient.]}
 
 Even with full knowledge of the Hamiltonian and equations of motion, this prediction will not be exact because the one-dimensional measurement, $\langle q | p_0 \rangle$, gives incomplete information about $p_0(x)$. We define the error in the prediction, $E_{p_0}[q]$, as the $\mu^{-1}$-weighted mean squared error,
 \begin{align}
@@ -190,7 +192,6 @@ q^* &= \argmin_q E[q]. \label{eq:defn}
 \end{align}
 
 The functional $E[q]$ thus measures how well the measurement of an arbitrary collective variable can be used to predict the future state of the system. We define the \emph{natural reaction coordinate}, $q^*$, as the minimizer of $E[q]$. It is, in this sense, the collective variable which is maximally informative about the system's dynamics.
-%\hl{[TODO: Reviewer 1 suggests that the maximum of $E[q]$ could be infinite; this is discussed in Reviewer 1 attachment. It seems that in order to maintain the math of the rest of the paper, this exception should be acknowledged diplomatically (if we agree with it). Furthermore, R1 doesn't see the connection between eqns. (4) and (18).]}
 
 \subsection{Alternative Definitions}
 
@@ -207,14 +208,25 @@ A number of computational methods build approximations to the transition path en
 
 Most of the existing algorithms that identify physical reaction coordinates from molecular simulations are based on committor analysis or TPS.\cite{best2005reaction, ma2005automatic, peters2006obtaining, peters2007extensions, borrero2007reaction, peters2012inertial, peters2013reaction, peters2010peak} In the simplest version, one initializes a large collection of trajectories from isosurfaces of an \emph{ansatz} reaction coordinate and measures which of the two basins, $A$ or $B$, they commit to. If this coordinate is a good approximation to the committor, the measured splitting fraction will be narrowly peaked around the characteristic value.\cite{peters2006using} Criteria based on this observation can then be used to screen an \emph{ansatz} reaction coordinate, or optimize the parameters of a model for the reaction coordinate.\cite{ma2005automatic} More efficient maximum likelihood method which fit a parametric model for the reaction coordinate from TPS data further refine this approach.\cite{peters2007extensions, peters2012inertial}
 
-By design, these algorithms rest on the pre-identification of the $A$ and $B$ states{\color{red}, and the reaction coordinate produced by the committor function(s) for a system with two metastable states is expected to correspond to the natural reaction coordinate described above. However, such algorithms} are not naturally suited to systems with more than two metastable states, although multiple-state extensions are available.\cite{rogal2008multiple} For the reasons discussed in \cref{sect:uniquely_dertmined}, we thus dispute the claim that the committor should be taken as the \emph{perfect} or \emph{exact} reaction coordinate.\cite{grunwald2009transition, ma2005automatic, peters2006obtaining, krivov2011numerical} The authors' experiences with large-scale simulations of protein folding and activation on Folding@Home have shown that it can be difficult to locate and precisely define these metastable states. This suggests that, for an important class of problems, the metastable states should be constructed from the output of some model, as opposed to being treated as a modelling input.\cite{shirts2000screen, voelz2010molecular, shukla2014activation} These considerations motivate our formulation of the natural reaction coordinate in a manner independent of the choice to label certain regions of phase space as $A$ or $B$.
+By design, these algorithms rest on the pre-identification of the $A$ and $B$ states are not naturally suited to systems with more than two metastable states, although multiple-state extensions are available.\cite{rogal2008multiple} 
+{\color{red}When these two states are both known \textit{a priori} and metastable, then we expect (but have not proven) that the committor function and the natural reaction coordinate are nearly equivalent. Algorithms that leverage this \textit{a priori} knowledge have the advantage of requiring significantly less sampling to converge their reaction coordinate estimators.
+However, }for the reasons discussed in \cref{sect:uniquely_dertmined}, we dispute the claim that the committor should be taken as the \emph{perfect} or \emph{exact} reaction coordinate.\cite{grunwald2009transition, ma2005automatic, peters2006obtaining, krivov2011numerical} The authors' experiences with large-scale simulations of protein folding and activation on Folding@Home have shown that it can be difficult to locate and precisely define these metastable states. This suggests that, for an important class of problems, the metastable states should be constructed from the output of some model, as opposed to being treated as a modelling input.\cite{shirts2000screen, voelz2010molecular, shukla2014activation} These considerations motivate our formulation of the natural reaction coordinate in a manner independent of the choice to label certain regions of phase space as $A$ or $B$.
 
-{\color{red}Another reaction coordinate definition worth mentioning is the second eigenfunction (or the subset of leading eigenfunctions) estimated by diffusion maps.\cite{nadler2006diffusion} In this formulation, a map is created from sampled points in phase space by utilizing a geometric distance metric, where points that are close geometrically are expected to correspond to kinetically similar conformations.
+We note that others have also defined a reaction coordinate consistent with the intuitive mathematical properties specified in Section~
+
+ In this formulation, a map is created from sampled points in phase space by utilizing a geometric distance metric, where points that are close geometrically are expected to correspond to kinetically similar conformations.
+
+
+{\color{red}Another reaction coordinate definition worth mentioning is the second eigenfunction (or the subset of leading eigenfunctions) estimated by diffusion maps.\cite{nadler2006diffusion} 
 % TODO
 A major advantage 
 ... it can't be the most statistically efficient way to estimate the eigenfunctions when the trajectories come from unbiased MD.
 It is noteworthy that results ascertained from diffusion maps are invariant to the time-indexing of trajectory frames; in other words, the duration of the path between any two conformations is not utilized for analysis. As a result, diffusion maps do not provide a straightforward way to estimate the timescale for a given eigenvector. In contrast, the natural reaction coordinate defined in this work yields a mathematical relationship between a dynamical process's eigenvector and its associated timescale, and thus directly provides kinetic information about the process. cite cecilia and frank diffusion+tica paper}
-\cite{Boninsegna_JCTC15}
+
+\hl{reword} We note that others have also used the term reaction coordinate for these eigenfunctions.\cite{nadler2006diffusion, rohrdanz2011determination, Boninsegna_JCTC15}
+
+% diffusion maps, MSMs, tICA, sparse tICA are all estimators for the same object. ours is better b/c direct kinetic info and sparsity
+
 
 % For example, \citet{ma2005automatic} harvested conformations on reactive trajectories with TPS, measured approximate committor values by shooting trajectories from each conformation, and trained a neural network to predict these values using structural order parameters. More efficient methods using likelihood maximization have been developed.
 
@@ -225,9 +237,9 @@ It is noteworthy that results ascertained from diffusion maps are invariant to t
 
 \section{A dominant eigenfunction is the natural reaction coordinate}
 \label{sect:natureal_reaction}
-In this section, we demonstrate that the {\color{red}(dominant)} natural reaction coordinate, as defined by the minimizer of \cref{eq:defn}, is the second leading eigenfunction of an integral operator associated with a system's Markovian dynamics in $\Omega$. For simplicity, we work here with a discrete-time Markov chain, $\{X_0, X_1, X_2, \ldots \}$, such as a typical all-atom MD simulation with a finite time step integrator, assuming only that the prediction interval $t$ is greater than 1 step (typically on the order of 2 fs). Afterwards, we note why the same results apply if the underlying dynamics are a continuous-time Markov process, and discuss the natural generalization to multiple reaction coordinates.
+In this section, we demonstrate that the natural reaction coordinate, as defined by the minimizer of \cref{eq:defn}, is the second leading eigenfunction of an integral operator associated with a system's Markovian dynamics in $\Omega$. For simplicity, we work here with a discrete-time Markov chain, $\{X_0, X_1, X_2, \ldots \}$, such as a typical all-atom MD simulation with a finite time step integrator, assuming only that the prediction interval $t$ is greater than 1 step (typically on the order of 2 fs). Afterwards, we note why the same results apply if the underlying dynamics are a continuous-time Markov process, and discuss the natural generalization to multiple reaction coordinates.
 
-We note that others have also used the term reaction coordinate for these eigenfunctions.\cite{nadler2006diffusion, rohrdanz2011determination}
+
 
 \subsection{Preliminaries}
 \label{subsect:theory_prelim}
@@ -312,6 +324,8 @@ E[q] &= \max_{u_0} || (\mathcal{T}(t) - \tilde{\mathcal{T}}(t)) \circ u_0 ||_\mu
 \end{align}
 where the maximum is understood to be taken over properly normalized $u_0$, $||u_0||_\mu = 1$. \hl{[TODO: R1 thinks the problem statement of (18) is finding the best approximation in operator norm to the transfer operator from a rank two operator, and that this has a known solution, i.e.~truncating the spectral expansion after the second term. R1 also doesn't see how this relates to Eqn.~(4).]}
 
+\hl{move to appendix etc, for pedagogical purposes}
+
 Now, we prove by why $\psi_2 = \min_q E[q]$. Observe that for any $q$, there exists a function $v(x)$ in the span of the first three eigenfunctions of $\mathcal{T}$, $v=a_1 \psi_1+ a_2 \psi_2 + a_3 \psi_3$, which is normalized, $\langle v | v \rangle_\mu = 1$, and which is in the null space of $\tilde{\mathcal{T}}$, $\tilde{\mathcal{T}} \circ v = 0$.\footnote{To be concrete, set $a_1 = 0$, and choose $a_2$ and $a_3$ to satisfy $a_2 \langle \psi_2 | q \rangle_\mu  = - a_3 \langle \psi_3 | q \rangle_\mu$ and $a_2^2 + a_3^2 = 1$.} Since $E[q]$ is the maximum of $E_{\mu_0}[q]$ over all possible $\mu_0$, it also must be greater than the error incurred for this particular starting distribution, $\mu_0=v$. Thus,
 \begin{align}
 E[q] &\geq || (\mathcal{T}(t) - \tilde{\mathcal{T}}(t)) \circ v ||_\mu^2 \\
@@ -343,7 +357,7 @@ One attractive property of this definition of the reaction coordinate is that it
 
 Recall that the maximally predictive projection criterion from \cref{subsect:Maximally_predictive} assumed that the approximation, $\tilde{p}_t$, was to be formed only from knowledge of the equilibrium distribution and the \emph{ansatz} reaction coordinate. The multiple coordinate generalization follows from modifying this criteria to assume knowledge of $\mu$ and the first $k-1$ eigenfunctions, $\mu$ and $\psi_2, \ldots, \psi_{k-1}$. Additionally, assume that the projection of the initial distribution onto each coordinate is available. Then, another application of the Eckart-Young Theorem shows that the maximally predictive remaining \emph{ansatz} coordinate is $\psi_{k}$. Multiple orthogonal natural reaction coordinates can thus be defined in a stepwise manner, and shown to be equal to the leading eigenfunctions, $\psi_2, \ldots, \psi_k$. In general, systems containing $k$ metastable states will have $k-1$ eigenfunctions whose associated eigenvalues are close to one, separated from the remaining eigenvalues by a so-called spectral gap.\cite{prinz2011markov}
 
-{\color{red}In general it is reasonable to expect that protein systems have multiple orthogonal slow reaction coordinates. It might be the case that only a subset of those proesses are of interest to the modeller. For example, sufficiently long molecular dynamics simulations any proline-containing protein should eventually sample the proline \textit{trans-cis} isomerization. Because of the partial double bond character and resulting high energy barrier for rotation about the X-Pro peptide bond (approximately 20 kcal/mol), this process is typically much slower than folding.\cite{Wedemeyer_Biochemistry02, Banushkina_JCP15} In this case, it would be necessary to interpret both $\psi_2$ and one or more eigenfunctions beyond $\psi_2$ to understand the folding process.}
+{\color{red}It is reasonable to expect that for complex systems a subset of leading eigenfunctions will be required to interpret the underlying dynamical processes. For example, sufficiently long molecular dynamics simulations of any proline-containing protein should eventually sample the proline \textit{trans-cis} isomerization. Because of the partial double bond character and resulting high energy barrier for rotation about the X-Pro peptide bond (approximately 20 kcal/mol), this process is typically much slower than folding.\cite{Wedemeyer_Biochemistry02, Banushkina_JCP15} In this case, it would be necessary to interpret both $\psi_2$ and one or more eigenfunctions beyond $\psi_2$ to understand the folding process.}
 
 \subsection{Two-dimensional example}
 In the left panel of \cref{fig:2dexample}, we show an example potential with two possible pathways between the dominant basins. The potential is given by the following expression,\cite{rhee2005onedimensional}
@@ -401,11 +415,11 @@ where the expectations are understood to be taken over the stochastic process. A
 %
 % Regularized statical estimators that enforce constraints or penalities, such as as penalty on the
 
-The tICA method has one obvious drawback: the solution, our approximate natural reaction coordinate, is a linear combination of all $m$ basis functions, and the loadings are typically non-zero. This makes the solutions difficult to interpret in a mechanistic manner, because hundreds or thousands of different interatomic distances and/or torsion angles, for example, can be combined together into a single collective variable. Because an important property of reaction coordinates is their role in facilitating physical interpretation of the underlying molecular system, we consider it desirable to reduce the number of explicitly used variables.
+The tICA method has one obvious drawback: the solution, our approximate natural reaction coordinate, is a linear combination of all $m$ basis functions, and the loadings are typically non-zero. This makes the solutions difficult to interpret in a mechanistic manner, because hundreds or thousands of different interatomic distances and/or torsion angles, for example, have been combined together into a single collective variable. Because an important property of reaction coordinates is their role in facilitating physical interpretation of the underlying molecular system, we consider it desirable to reduce the number of explicitly used variables.
 
 These same interpretability issues arise with numerous methods in machine learning and statistics. For example, in multivariate linear regression, a response variable is modeled as the linear combination of input variables. Interpretable models, with only a small number of non-zero coefficients, can be obtained using variable selection methods such as the lasso.\cite{tibshirani1996regression}
 
-In this section, we introduce a new \emph{sparse} approximator for $\psi_2$. The solution will share the same form as the tICA approximation, $q = \sum_{i} a_i \chi_i$, except that the vast majority of the expansion coefficients, $a_i$, will be zero. {\color{red}This method naturally extends to sparse approximators for each of the other leading eigenfunctions, $\psi_3, \ldots, \psi_k$.}
+In this section, we introduce a new \emph{sparse} approximator for $\psi_2$. The solution will share the same form as the tICA approximation, $q(x) = \sum_{i} a_i \chi_i(x)$, except that the vast majority of the expansion coefficients, $a_i$, will be zero. {\color{red}This method naturally extends to sparse approximators for each of the other leading eigenfunctions, $\psi_3, \ldots, \psi_k$.}
 
 One general approach for building sparsity-inducing estimators is to augment the objective function --- in our case, \cref{eq:geneig} --- with a regularization term that penalizes model complexity and steers the optimization towards solutions that fit the data well, but also remain simple. By scaling the strength of this term, the modeller can trade off between the two goals.
 
@@ -438,7 +452,7 @@ Investigating sparse generalized eigenvalue problems, \citet{sriperumbudur2011ma
 \begin{algorithmic}
 %\Require $\mathbf{C} \in \mathbb{S}^n, \mathbf{\Sigma} \in \mathbb{S}_{++}^n, \rho>0, \epsilon>0$
 \Require {\color{red}$\mathbf{C}$ is a $n \times n$ real symmetric matrix, $\mathbf{\Sigma}$ is a $n \times n$ positive definite matrix,} $\rho>0$, $\epsilon>0$
-\Ensure {\color{red}$\mathbf{D}(\mathbf{w}^{(l)})$ be a diagonal matrix with $(w_1^{(l)},\dots,w_n^{(l)})$ as its principal diagonal, $\lambda_{min}(\mathbf{C})$ be the minimum generalized eigenvalue associated with the matrix $\mathbf{C}$}
+\Ensure {\color{red}$\mathbf{D}(\mathbf{w}^{(l)})$ be a diagonal matrix with $(w_1^{(l)},\dots,w_n^{(l)})$ as its principal diagonal, $\lambda_{min}(\mathbf{C})$ be the smallest eigenvalue of the matrix $\mathbf{C}$}
 \State Choose $\tau > \max(0, -\lambda_{min}(\mathbf{C}))$, $\mathbf{x}^{(0)} \in \{\mathbf{x} : \mathbf{x}^T \mathbf{\Sigma} \mathbf{x} \leq 1 \}$
 \State $\rho_\epsilon = \rho / \log(1+\epsilon^{-1})$
 \While{not converged} \\
@@ -601,7 +615,7 @@ Using these input features, we fit a sparse tICA model with $\rho=0.005$ and obs
 \centering
 \includegraphics[width=0.85\textwidth]{a3d.pdf}
 \onecolumngrid
-\caption{\label{fig:a3d} {\color{red}(a) Superimposing a plot of the slowest sparse tICA solution, $\psi_2$, and the RMSD of the protein conformation to the folded structure shows that the inter-residue contact distance isolated by $\psi_2$ does not correspond to the folding of $\alpha$3D. (b) Superimposing a plot of the next sparse tICA solution, $\psi_3$, and the RMSD of the protein conformation to the folded structure shows that either inter-residue contact distance implicated in $\psi_3$ serves as a suitable reaction coordinate for folding. (c) The folded state of $\alpha$3D illustrating the residue pairs defining the contact distances retained in $\psi_2$ (violet) and $\psi_3$ (blue and cyan). \hl{frame -> time (ms)}}}
+\caption{\label{fig:a3d} {\color{red}(a) Superimposing a plot of the slowest sparse tICA solution, $\psi_2$, and the RMSD of the protein conformation to the folded structure shows that the inter-residue contact distance isolated by $\psi_2$ does not correspond to the folding of $\alpha$3D. (b) Superimposing a plot of the next sparse tICA solution, $\psi_3$, and the RMSD of the protein conformation to the folded structure shows that either inter-residue contact distance implicated in $\psi_3$ serves as a suitable reaction coordinate for folding. (c) The folded state of $\alpha$3D illustrating the residue pairs defining the contact distances retained in $\psi_2$ (violet) and $\psi_3$ (blue and cyan). Only the first half of the dataset is shown.}}
 \end{figure*}
 
 {\color{red} Next we use the sparse tICA algorithm to elucidate a specific process; in this case, the folding of $\alpha$3D, a 73-residue three-helix bundle.\cite{Walsh_PNAS99, Kubelka_COSB04} We analyzed the $\alpha$-carbon trace of a 707 $\mu$s molecular dynamics dataset for $\alpha$3D generated by \citet{LindorffLarsen_Science11}. The protein folds and unfolds 12 times over the course of the simulations. We extracted inter-residue $\alpha$-carbon distances for all pairs separated by least two residues from each frame for a total of 2485 distances. From these distances, we fit a sparse tICA model ($\rho$=0.5). }
@@ -632,7 +646,7 @@ Application of this method to molecular dynamics simulations of a 2-fluorobiphen
 We anticipate that this method will be useful for the analysis of today's large molecular dynamics data sets. An implementation of this estimator is available in the MSMBuilder software package at \url{http://msmbuilder.org/} under the GNU Lesser General Public License.
 
 \section*{Acknowledgments}
-The authors thank Thomas J. Lane for helpful discussions made during the preparation of this manuscript, Ariana Peck and Carlos X. Hern\'{a}ndez for invaluable copy editing, and the National Institutes of Health under Nos NIH R01-GM62868 for funding. We graciously acknowledge D.E. Shaw Research for providing access to the BPTI trajectory data set.
+The authors thank Thomas J. Lane for helpful discussions made during the preparation of this manuscript, Ariana Peck and Carlos X. Hern\'{a}ndez for invaluable copy editing, and the National Institutes of Health under Nos. NIH R01-GM62868 for funding. We graciously acknowledge D.E. Shaw Research for providing access to the BPTI trajectory data set.
 %The authors thank Brooke Husic and Thomas J. Lane for helpful discussions made during the preparation of this manuscript,
 
 \appendix

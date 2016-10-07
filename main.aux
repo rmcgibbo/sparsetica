@@ -46,6 +46,9 @@
 \citation{FiPy:2009}
 \citation{gibbs2002choosing}
 \citation{berezhkovskii2005one,rhee2005onedimensional,berezhkovskii2013fiffusion}
+\citation{PhysRev.54.554}
+\citation{Bolhuis2002TRANSITION,dellago2002transition}
+\citation{Du1998transition,pande199pathways}
 \@writefile{toc}{\contentsline {subsection}{\numberline {C}Maximally predictive projection}{3}{section*.7}}
 \newlabel{subsect:Maximally_predictive}{{II\tmspace  +\thinmuskip {.1667em}C}{3}{}{section*.7}{}}
 \newlabel{subsect:Maximally_predictive@cref}{{[subsection][3][2]II\tmspace  +\thinmuskip {.1667em}C}{3}}
@@ -56,9 +59,6 @@
 \newlabel{eq:defn}{{4}{3}{}{equation.2.4}{}}
 \newlabel{eq:defn@cref}{{[equation][4][]4}{3}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {D}Alternative Definitions}{3}{section*.8}}
-\citation{PhysRev.54.554}
-\citation{Bolhuis2002TRANSITION,dellago2002transition}
-\citation{Du1998transition,pande199pathways}
 \citation{hummer2004from}
 \citation{dellago2002transition,Bolhuis2002TRANSITION}
 \citation{vanErp2005157}
@@ -74,8 +74,7 @@
 \newlabel{fig:eq1}{{1}{4}{Predictions, $\tilde {p}_t$, made by the natural reaction coordinate, $q^*$, for Smoluchowski diffusion on two-well potential, $U(x) = (x-1)^2(x+1)^2$ with a uniform diffusion constant, $D=1$. The upper left panel shows the stationary distribution, $\mu (x)$, and the lower left panel shows the natural reaction coordinate, $q^*$, which changes sign between the two metastable states. The main panel shows the family of possible predictions, $\tilde {p}_t$ that can be made by \cref {eq:functionalform} using this choice of $q$, indicating the variable partitioning of density between the two basins. For an arbitrary initial distribution, $p_0$, this coordinate minimizes the worst-case predictive error about the future ensemble $p_t$ given only knowledge of the current ensemble's projection onto $q$. As discussed in \cref {sect:natureal_reaction}, $q^*$ was calculated from the second eigenfunction of the Smoluchowski operator, which was determined in this case using the FiPy PDE solver.\cite {FiPy:2009}}{figure.1}{}}
 \newlabel{fig:eq1@cref}{{[figure][1][]1}{4}}
 \citation{nadler2006diffusion}
-\citation{Boninsegna_JCTC15}
-\citation{nadler2006diffusion,rohrdanz2011determination}
+\citation{nadler2006diffusion,rohrdanz2011determination,Boninsegna_JCTC15}
 \citation{schutte2001transfer}
 \@writefile{toc}{\contentsline {section}{\numberline {III}A dominant eigenfunction is the natural reaction coordinate}{5}{section*.9}}
 \newlabel{sect:natureal_reaction}{{III}{5}{}{section*.9}{}}
@@ -182,8 +181,8 @@
 \newlabel{fig:bpti_conformations}{{8}{13}{The near-native (above) and ARG42-flipped (below) conformations of BPTI from the simulation trajectory. The first panel shows the near-native conformation sampled by the majority of the simulation with a ARG42 $\phi $ angle between $-50^\circ $ and $-150^\circ $, with the expected four crystallographic waters. Nearly $800$ $\mu s$ into the simulation, the trajectory samples an alternate state in which the protein's core opens and hydrates and the crystallographic waters can exchange with the bulk. In this state, the ARG42 $\phi $ angle has flipped, putting its oxygen pointing into the now hydrated core}{figure.8}{}}
 \newlabel{fig:bpti_conformations@cref}{{[figure][8][]8}{13}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {C}Folding of a three-helix bundle}{13}{section*.25}}
-\@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces  {\color  {red}(a) Superimposing a plot of the slowest sparse tICA solution, $\psi _2$, and the RMSD of the protein conformation to the folded structure shows that the inter-residue contact distance isolated by $\psi _2$ does not correspond to the folding of $\alpha $3D. (b) Superimposing a plot of the next sparse tICA solution, $\psi _3$, and the RMSD of the protein conformation to the folded structure shows that either inter-residue contact distance implicated in $\psi _3$ serves as a suitable reaction coordinate for folding. (c) The folded state of $\alpha $3D illustrating the residue pairs defining the contact distances retained in $\psi _2$ (violet) and $\psi _3$ (blue and cyan). \texthl  {frame -> time (ms)}}}}{14}{figure.9}}
-\newlabel{fig:a3d}{{9}{14}{\color {red}(a) Superimposing a plot of the slowest sparse tICA solution, $\psi _2$, and the RMSD of the protein conformation to the folded structure shows that the inter-residue contact distance isolated by $\psi _2$ does not correspond to the folding of $\alpha $3D. (b) Superimposing a plot of the next sparse tICA solution, $\psi _3$, and the RMSD of the protein conformation to the folded structure shows that either inter-residue contact distance implicated in $\psi _3$ serves as a suitable reaction coordinate for folding. (c) The folded state of $\alpha $3D illustrating the residue pairs defining the contact distances retained in $\psi _2$ (violet) and $\psi _3$ (blue and cyan). \hl {frame -> time (ms)}}{figure.9}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces  {\color  {red}(a) Superimposing a plot of the slowest sparse tICA solution, $\psi _2$, and the RMSD of the protein conformation to the folded structure shows that the inter-residue contact distance isolated by $\psi _2$ does not correspond to the folding of $\alpha $3D. (b) Superimposing a plot of the next sparse tICA solution, $\psi _3$, and the RMSD of the protein conformation to the folded structure shows that either inter-residue contact distance implicated in $\psi _3$ serves as a suitable reaction coordinate for folding. (c) The folded state of $\alpha $3D illustrating the residue pairs defining the contact distances retained in $\psi _2$ (violet) and $\psi _3$ (blue and cyan). Only the first half of the dataset is shown.}}}{14}{figure.9}}
+\newlabel{fig:a3d}{{9}{14}{\color {red}(a) Superimposing a plot of the slowest sparse tICA solution, $\psi _2$, and the RMSD of the protein conformation to the folded structure shows that the inter-residue contact distance isolated by $\psi _2$ does not correspond to the folding of $\alpha $3D. (b) Superimposing a plot of the next sparse tICA solution, $\psi _3$, and the RMSD of the protein conformation to the folded structure shows that either inter-residue contact distance implicated in $\psi _3$ serves as a suitable reaction coordinate for folding. (c) The folded state of $\alpha $3D illustrating the residue pairs defining the contact distances retained in $\psi _2$ (violet) and $\psi _3$ (blue and cyan). Only the first half of the dataset is shown}{figure.9}{}}
 \newlabel{fig:a3d@cref}{{[figure][9][]9}{14}}
 \@writefile{toc}{\contentsline {section}{\numberline {VIII}Conclusions}{14}{section*.26}}
 \citation{anderson1963}
