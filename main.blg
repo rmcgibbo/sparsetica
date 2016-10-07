@@ -10,7 +10,7 @@ Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
 Database file #1: mainNotes.bib
-Database file #2: references.bib.bib
+Database file #2: references.bib
 control{REVTEX41Control}, control.key{N/A}, control.author{N/A}, control.editor{N/A}, control.title{N/A}, control.pages{N/A}, control.year{N/A}, control.eprint{N/A}, 
 control{aip41Control}, control.key{N/A}, control.author{N/A}, control.editor{N/A}, control.title{}, control.pages{0}, control.year{N/A}, control.eprint{N/A}, 
 Warning--jnrlst (dependency: not reversed) set 1
@@ -24,45 +24,45 @@ Control: page (0) single
 Control: year (1) truncated
 Control: production of eprint (0) enabled
 Warning--empty note in o2013operator
-You've used 98 entries,
+You've used 105 entries,
             5918 wiz_defined-function locations,
-            2345 strings with 35593 characters,
-and the built_in function-call counts, 94281 in all, are:
-= -- 6184
-> -- 2914
-< -- 564
-+ -- 936
-- -- 736
-* -- 14164
-:= -- 9955
-add.period$ -- 97
-call.type$ -- 98
-change.case$ -- 387
-chr.to.int$ -- 97
-cite$ -- 99
-duplicate$ -- 8531
-empty$ -- 6772
-format.name$ -- 1478
-if$ -- 18578
+            2403 strings with 37295 characters,
+and the built_in function-call counts, 101332 in all, are:
+= -- 6632
+> -- 3149
+< -- 604
++ -- 1011
+- -- 795
+* -- 15253
+:= -- 10696
+add.period$ -- 104
+call.type$ -- 105
+change.case$ -- 415
+chr.to.int$ -- 104
+cite$ -- 106
+duplicate$ -- 9170
+empty$ -- 7285
+format.name$ -- 1599
+if$ -- 19971
 int.to.chr$ -- 2
-int.to.str$ -- 105
-missing$ -- 1141
-newline$ -- 340
-num.names$ -- 288
-pop$ -- 3659
+int.to.str$ -- 112
+missing$ -- 1223
+newline$ -- 361
+num.names$ -- 309
+pop$ -- 3927
 preamble$ -- 1
-purify$ -- 480
+purify$ -- 515
 quote$ -- 0
-skip$ -- 3369
+skip$ -- 3609
 stack$ -- 0
-substring$ -- 2324
-swap$ -- 8177
-text.length$ -- 269
+substring$ -- 2479
+swap$ -- 8788
+text.length$ -- 291
 text.prefix$ -- 0
 top$ -- 10
-type$ -- 1330
+type$ -- 1428
 warning$ -- 2
-while$ -- 379
+while$ -- 405
 width$ -- 0
-write$ -- 815
+write$ -- 871
 (There were 2 warnings)

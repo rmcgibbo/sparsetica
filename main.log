@@ -1,8 +1,8 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.5.25)  4 MAR 2016 00:42
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.5.25)  6 OCT 2016 19:52
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**main.tex
+**main
 (./main.tex
 LaTeX2e <2014/05/01>
 Babel <3.9k> and hyphenation patterns for 78 languages loaded.
@@ -1178,35 +1178,35 @@ Package: appendix 2009/09/02 v1.2b extra appendix facilities
 (/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/alphalph.sty
 Package: alphalph 2011/05/13 v2.4 Convert numbers to letters (HO)
 )
-LaTeX Font Info:    Try loading font information for U+rsfs on input line 48.
+LaTeX Font Info:    Try loading font information for U+rsfs on input line 49.
 
 (/usr/local/texlive/2014/texmf-dist/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
-LaTeX Font Info:    Try loading font information for U+msa on input line 48.
+LaTeX Font Info:    Try loading font information for U+msa on input line 49.
 
 (/usr/local/texlive/2014/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 48.
+LaTeX Font Info:    Try loading font information for U+msb on input line 49.
 
 (/usr/local/texlive/2014/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 Package alphalph Info: Number of symbols for \fnsymbolmult is 5 on input line 4
-8.
+9.
 \c@defi=\count192
 \c@theorem=\count193
-Class revtex4-1 Info: Patching array package. on input line 64.
+Class revtex4-1 Info: Patching array package. on input line 65.
 
 
 Class revtex4-1 Warning: Repair the float package.
 
-Class revtex4-1 Info: Robustifying \LaTeX's \boldmath command on input line 64.
+Class revtex4-1 Info: Robustifying \LaTeX's \boldmath command on input line 65.
 
-Class revtex4-1 Info: cite was not loaded (OK!) on input line 64.
-Class revtex4-1 Info: mcite was not loaded (OK!) on input line 64.
-Class revtex4-1 Info: multicol was not loaded (OK!) on input line 64.
+Class revtex4-1 Info: cite was not loaded (OK!) on input line 65.
+Class revtex4-1 Info: mcite was not loaded (OK!) on input line 65.
+Class revtex4-1 Info: multicol was not loaded (OK!) on input line 65.
 
 LaTeX Warning: Unused global option(s):
     [nolinenumbers].
@@ -1214,20 +1214,20 @@ LaTeX Warning: Unused global option(s):
 (./main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
  (/usr/local/texlive/2014/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count194
@@ -1258,7 +1258,7 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 \AtBeginShipoutBox=\box74
-Package hyperref Info: Link coloring OFF on input line 64.
+Package hyperref Info: Link coloring OFF on input line 65.
 
 (/usr/local/texlive/2014/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
@@ -1268,450 +1268,269 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 \c@section@level=\count200
 )
-LaTeX Info: Redefining \ref on input line 64.
-LaTeX Info: Redefining \pageref on input line 64.
-LaTeX Info: Redefining \nameref on input line 64.
+LaTeX Info: Redefining \ref on input line 65.
+LaTeX Info: Redefining \pageref on input line 65.
+LaTeX Info: Redefining \nameref on input line 65.
 
 (./main.out) (./main.out)
 \@outlinefile=\write5
 \openout5 = `main.out'.
 
-Class revtex4-1 Info: Taking \maketitle back from hyperref on input line 64.
+Class revtex4-1 Info: Taking \maketitle back from hyperref on input line 65.
 Class revtex4-1 Info: Overriding lineo.sty, restoring output routine, on input 
-line 64.
-Class revtex4-1 Info: Line numbering not turned on yet on input line 64.
+line 65.
+Class revtex4-1 Info: Line numbering not turned on yet on input line 65.
 \openout3 = `mainNotes.bib'.
 
-Class revtex4-1 Info: Overriding \@LN@LLerror on input line 64.
+Class revtex4-1 Info: Overriding \@LN@LLerror on input line 65.
  [1{/usr/local/texlive/2014/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 109.
+(hyperref)                removing `math shift' on input line 116.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\Omega' on input line 109.
+(hyperref)                removing `\Omega' on input line 116.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 109.
+(hyperref)                removing `math shift' on input line 116.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 109.
+(hyperref)                removing `math shift' on input line 116.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 109.
+(hyperref)                removing `math shift' on input line 116.
 
-[2] <doublewell-figure-crop.pdf, id=208, 768.8725pt x 387.4475pt>
+[2] <doublewell-figure-crop.pdf, id=212, 768.8725pt x 387.4475pt>
 File: doublewell-figure-crop.pdf Graphic file (type pdf)
 
 <use doublewell-figure-crop.pdf>
-Package pdftex.def Info: doublewell-figure-crop.pdf used on input line 144.
+Package pdftex.def Info: doublewell-figure-crop.pdf used on input line 152.
 (pdftex.def)             Requested size: 408.00156pt x 205.6004pt.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 160.
 
-
-Package hyperref Warning: Suppressing link with empty target on input line 145.
-
-
-
-Package hyperref Warning: Suppressing link with empty target on input line 145.
-
-
-
-Package hyperref Warning: Suppressing link with empty target on input line 145.
-
-
-
-Package hyperref Warning: Suppressing link with empty target on input line 145.
-
-
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 152.
 
 (/usr/local/texlive/2014/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 152.
-
-
-Package hyperref Warning: Suppressing link with empty target on input line 166.
-
-
-
-Package hyperref Warning: Suppressing link with empty target on input line 184.
-
-
-
-Package hyperref Warning: Suppressing link with empty target on input line 184.
-
-
-[3]
-
-Package hyperref Warning: Suppressing link with empty target on input line 197.
-
-
-
-Underfull \hbox (badness 4779) in paragraph at lines 197--198
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 160.
+ [3]
+Underfull \hbox (badness 4779) in paragraph at lines 211--214
 []\OT1/cmr/m/n/10 By de-sign, these al-go-rithms rest on the pre-
  []
 
 [4 <./doublewell-figure-crop.pdf>]
-
-Package hyperref Warning: Suppressing link with empty target on input line 209.
-
-
-
-Underfull \hbox (badness 1490) in paragraph at lines 219--219
+Underfull \hbox (badness 1490) in paragraph at lines 250--250
   [][][]\OT1/cmr/m/n/8 For ex-am-ple, if the un-der-ly-ing dy-nam-ics are over-
 damped
  []
 
-[5] <2d-potential-crop.pdf, id=341, 303.1325pt x 304.13625pt>
+[5] <2d-potential-crop.pdf, id=351, 303.1325pt x 304.13625pt>
 File: 2d-potential-crop.pdf Graphic file (type pdf)
 
 <use 2d-potential-crop.pdf>
-Package pdftex.def Info: 2d-potential-crop.pdf used on input line 269.
+Package pdftex.def Info: 2d-potential-crop.pdf used on input line 300.
 (pdftex.def)             Requested size: 203.99689pt x 204.67517pt.
 
-<2d-potential-psi2-crop.pdf, id=342, 302.12875pt x 304.13625pt>
+<2d-potential-psi2-crop.pdf, id=352, 302.12875pt x 304.13625pt>
 File: 2d-potential-psi2-crop.pdf Graphic file (type pdf)
 
 <use 2d-potential-psi2-crop.pdf>
-Package pdftex.def Info: 2d-potential-psi2-crop.pdf used on input line 270.
+Package pdftex.def Info: 2d-potential-psi2-crop.pdf used on input line 301.
 (pdftex.def)             Requested size: 203.99689pt x 205.3527pt.
-
-
-Package hyperref Warning: Suppressing link with empty target on input line 276.
-
-
-
-Package hyperref Warning: Suppressing link with empty target on input line 280.
-
-
-
-Package hyperref Warning: Suppressing link with empty target on input line 288.
-
-
-
-Package hyperref Warning: Suppressing link with empty target on input line 325.
-
-
-[6]
-
-Package hyperref Warning: Suppressing link with empty target on input line 330.
-
-
-
-Package hyperref Warning: Suppressing link with empty target on input line 339.
-
-
-[7 <./2d-potential-crop.pdf> <./2d-potential-psi2-crop.pdf
+ [6] [7 <./2d-potential-crop.pdf> <./2d-potential-psi2-crop.pdf
 
 pdfTeX warning: pdflatex (file ./2d-potential-psi2-crop.pdf): PDF inclusion: mu
 ltiple pdfs with page group included in a single page
 >]
-
-Package hyperref Warning: Suppressing link with empty target on input line 377.
-
-
-
-Package hyperref Warning: Suppressing link with empty target on input line 391.
-
-
-
-Package hyperref Warning: Suppressing link with empty target on input line 395.
-
-
-
-Package hyperref Warning: Suppressing link with empty target on input line 395.
-
-
-<regularizer.pdf, id=448, 433.62pt x 289.08pt>
-File: regularizer.pdf Graphic file (type pdf)
- <use regularizer.pdf>
-Package pdftex.def Info: regularizer.pdf used on input line 402.
-(pdftex.def)             Requested size: 255.0pt x 169.99992pt.
-
-Overfull \hbox (9.0pt too wide) in paragraph at lines 402--403
- [][] 
+Underfull \hbox (badness 1527) in paragraph at lines 377--378
+[]\OT1/cmr/m/n/10 Markov state mod-els (MSMs) and []time-structure
  []
 
 
-Package hyperref Warning: Suppressing link with empty target on input line 406.
+Underfull \hbox (badness 3058) in paragraph at lines 377--378
+\OT1/cmr/m/n/10 based in-de-pen-dent com-po-nent anal-y-sis (tICA)[] are
+ []
 
 
-[8 <./regularizer.pdf>]
-
-Package hyperref Warning: Suppressing link with empty target on input line 416.
-
-
-
-Package hyperref Warning: Suppressing link with empty target on input line 416.
+Underfull \hbox (badness 4132) in paragraph at lines 377--378
+\OT1/cmr/m/n/10 two widely used ap-prox-i-ma-tors for $\OML/cmm/m/it/10  []$ \O
+T1/cmr/m/n/10 that can
+ []
 
 
+Underfull \hbox (badness 1552) in paragraph at lines 377--378
+\OT1/cmr/m/n/10 be pa-ram-e-ter-ized di-rectly from molec-u-lar dy-nam-ics
+ []
 
-Package hyperref Warning: Suppressing link with empty target on input line 416.
+[8] <regularizer.pdf, id=487, 433.62pt x 289.08pt>
+File: regularizer.pdf Graphic file (type pdf)
+ <use regularizer.pdf>
+Package pdftex.def Info: regularizer.pdf used on input line 435.
+(pdftex.def)             Requested size: 255.0pt x 169.99992pt.
 
+Overfull \hbox (9.0pt too wide) in paragraph at lines 435--436
+ [][] 
+ []
 
 Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
-put line 431.
+put line 466.
+[9 <./regularizer.pdf>]
 
-Package hyperref Warning: Suppressing link with empty target on input line 439.
-
-
-
-Package hyperref Warning: Suppressing link with empty target on input line 449.
-
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 504.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 469.
+(hyperref)                removing `math shift' on input line 504.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 469.
-
-
-Package hyperref Warning: Suppressing link with empty target on input line 470.
-
-
-
-Package hyperref Warning: Suppressing link with empty target on input line 474.
-
-
-[9]
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 494.
+(hyperref)                removing `math shift' on input line 529.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 494.
+(hyperref)                removing `math shift' on input line 529.
 
-
-Package hyperref Warning: Suppressing link with empty target on input line 495.
-
-
-
-Package hyperref Warning: Suppressing link with empty target on input line 503.
-
-
-
-Package hyperref Warning: Suppressing link with empty target on input line 519.
-
-
-<bipehnyl-chemdraw-crop.pdf, id=533, 198.7425pt x 132.495pt>
+[10] <bipehnyl-chemdraw-crop.pdf, id=584, 198.7425pt x 132.495pt>
 File: bipehnyl-chemdraw-crop.pdf Graphic file (type pdf)
 
 <use bipehnyl-chemdraw-crop.pdf>
-Package pdftex.def Info: bipehnyl-chemdraw-crop.pdf used on input line 530.
+Package pdftex.def Info: bipehnyl-chemdraw-crop.pdf used on input line 565.
 (pdftex.def)             Requested size: 101.99844pt x 68.00014pt.
 
-<tics-crop.pdf, id=534, 833.1125pt x 323.2075pt>
+<tics-crop.pdf, id=585, 833.1125pt x 323.2075pt>
 File: tics-crop.pdf Graphic file (type pdf)
  <use tics-crop.pdf>
-Package pdftex.def Info: tics-crop.pdf used on input line 536.
+Package pdftex.def Info: tics-crop.pdf used on input line 571.
 (pdftex.def)             Requested size: 510.0pt x 197.8566pt.
-
-
-Package hyperref Warning: Suppressing link with empty target on input line 538.
-
-
-
-Package hyperref Warning: Suppressing link with empty target on input line 538.
-
-
-
-Package hyperref Warning: Suppressing link with empty target on input line 541.
-
-
-[10 <./bipehnyl-chemdraw-crop.pdf>]
-
-Package hyperref Warning: Suppressing link with empty target on input line 545.
-
-
-
-Package hyperref Warning: Suppressing link with empty target on input line 545.
-
-
-
-Package hyperref Warning: Suppressing link with empty target on input line 547.
-
-
-<von-mises-crop.pdf, id=565, 453.695pt x 235.88126pt>
+ [11 <./bipehnyl-chemdraw-crop.pdf>]
+<von-mises-crop.pdf, id=620, 453.695pt x 235.88126pt>
 File: von-mises-crop.pdf Graphic file (type pdf)
  <use von-mises-crop.pdf>
-Package pdftex.def Info: von-mises-crop.pdf used on input line 554.
+Package pdftex.def Info: von-mises-crop.pdf used on input line 589.
 (pdftex.def)             Requested size: 255.0pt x 132.57849pt.
 
-Overfull \hbox (9.0pt too wide) in paragraph at lines 554--555
+Overfull \hbox (9.0pt too wide) in paragraph at lines 589--590
  [][] 
  []
 
-<arg42-phi-angle.png, id=566, 433.8609pt x 289.08pt>
+<arg42-phi-angle.png, id=621, 433.8609pt x 289.08pt>
 File: arg42-phi-angle.png Graphic file (type png)
  <use arg42-phi-angle.png>
-Package pdftex.def Info: arg42-phi-angle.png used on input line 559.
+Package pdftex.def Info: arg42-phi-angle.png used on input line 594.
 (pdftex.def)             Requested size: 255.0pt x 169.90288pt.
 
-Overfull \hbox (9.0pt too wide) in paragraph at lines 559--560
+Overfull \hbox (9.0pt too wide) in paragraph at lines 594--595
  [][] 
  []
 
-<near-native-2.pdf, id=569, 614.295pt x 794.97pt>
+<near-native-2.pdf, id=624, 614.295pt x 794.97pt>
 File: near-native-2.pdf Graphic file (type pdf)
  <use near-native-2.pdf>
-Package pdftex.def Info: near-native-2.pdf used on input line 565.
+Package pdftex.def Info: near-native-2.pdf used on input line 600.
 (pdftex.def)             Requested size: 203.99689pt x 263.99062pt.
 
-<frame-33042-2.pdf, id=570, 614.295pt x 794.97pt>
+<frame-33042-2.pdf, id=625, 614.295pt x 794.97pt>
 File: frame-33042-2.pdf Graphic file (type pdf)
  <use frame-33042-2.pdf>
-Package pdftex.def Info: frame-33042-2.pdf used on input line 566.
+Package pdftex.def Info: frame-33042-2.pdf used on input line 601.
 (pdftex.def)             Requested size: 203.99689pt x 263.99062pt.
 
+[12 <./tics-crop.pdf> <./von-mises-crop.pdf
 
-Package hyperref Warning: Suppressing link with empty target on input line 572.
-
-
-[11 <./tics-crop.pdf>]
+pdfTeX warning: pdflatex (file ./von-mises-crop.pdf): PDF inclusion: multiple p
+dfs with page group included in a single page
+> <./arg42-phi-angle.png (PNG copy)>]
 
 LaTeX Warning: A float is stuck (cannot be placed); try class option [floatfix]
- on input line 573.
+ on input line 608.
 
-
-Package hyperref Warning: Suppressing link with empty target on input line 574.
-
-
-
-Package hyperref Warning: Suppressing link with empty target on input line 574.
-
-
-[12 <./von-mises-crop.pdf> <./arg42-phi-angle.png (PNG copy)> <./near-native-2.
-pdf
-
-pdfTeX warning: pdflatex (file ./near-native-2.pdf): PDF inclusion: multiple pd
-fs with page group included in a single page
-> <./frame-33042-2.pdf
+<a3d.pdf, id=690, 867.24pt x 596.2275pt>
+File: a3d.pdf Graphic file (type pdf)
+ <use a3d.pdf>
+Package pdftex.def Info: a3d.pdf used on input line 616.
+(pdftex.def)             Requested size: 433.50311pt x 298.03113pt.
+ [13 <./near-native-2.pdf> <./frame-33042-2.pdf
 
 pdfTeX warning: pdflatex (file ./frame-33042-2.pdf): PDF inclusion: multiple pd
 fs with page group included in a single page
->]
-
-Package hyperref Warning: Suppressing link with empty target on input line 600.
-
-
-[13]
-
-Package hyperref Warning: Suppressing link with empty target on input line 640.
-
-
-
-Package hyperref Warning: Suppressing link with empty target on input line 651.
-
-
-
-Package hyperref Warning: Suppressing link with empty target on input line 668.
-
-
-pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.1}) 
-has been already used, duplicate ignored
+>] [14 <./a3d.pdf>] [15]pdfTeX warning (ext4): destination with the same identi
+fier (name{ALG@line.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.673 \State
+l.736 \State
              $\mathbf{w}, \mathbf{V} \gets \mathrm{eigs}(\mathbf{\Sigma})$ \...
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.2}) 
 has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.674 \State
+l.737 \State
              $\mathbf{c} \gets \mathbf{V}^T\mathbf{a}$pdfTeX warning (ext4): de
 stination with the same identifier (name{ALG@line.3}) has been already used, du
 plicate ignored
 <to be read again> 
                    \relax 
-l.675 \If
+l.738 \If
          {$\mathbf{c}^T\mathbf{D}(\mathbf{w})\mathbf{c} \leq 1$}pdfTeX warning 
 (ext4): destination with the same identifier (name{ALG@line.4}) has been alread
 y used, duplicate ignored
 <to be read again> 
                    \relax 
-l.676 \State
+l.739 \State
              \Return $\mathbf{a}$ \Comment{Trivial if $\mathbf{a}$ is inside...
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.5}) 
 has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.677 \Else
+l.740 \Else
            pdfTeX warning (ext4): destination with the same identifier (name{AL
 G@line.6}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.678     \State
+l.741     \State
                  $\mu^{(0)} \gets 1$pdfTeX warning (ext4): destination with the
  same identifier (name{ALG@line.7}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.679     \While
-                {not converged} \Comment{Newton's method} [14]
-
-Package hyperref Warning: Suppressing link with empty target on input line 692.
-
-
-
-Package hyperref Warning: Suppressing link with empty target on input line 694.
-
-
-
-Package hyperref Warning: Suppressing link with empty target on input line 694.
-
-
-<runtime-performance.pdf, id=716, 433.62pt x 289.08pt>
+l.742     \While
+                {not converged} \Comment{Newton's method}
+<runtime-performance.pdf, id=793, 433.62pt x 289.08pt>
 File: runtime-performance.pdf Graphic file (type pdf)
 
 <use runtime-performance.pdf>
-Package pdftex.def Info: runtime-performance.pdf used on input line 697.
+Package pdftex.def Info: runtime-performance.pdf used on input line 760.
 (pdftex.def)             Requested size: 255.0pt x 169.99992pt.
 
-Overfull \hbox (9.0pt too wide) in paragraph at lines 697--698
+Overfull \hbox (9.0pt too wide) in paragraph at lines 760--761
  [][] 
  []
 
+(./main.bbl [16]
 
-Package hyperref Warning: Suppressing link with empty target on input line 698.
+LaTeX Warning: A float is stuck (cannot be placed); try class option [floatfix]
+ on input line 59.
 
-
-
-Package hyperref Warning: Suppressing link with empty target on input line 698.
-
-
-(./main.bbl
-
-Package hyperref Warning: Suppressing link with empty target on input line 9.
-
-[15 <./runtime-performance.pdf>]) [16]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 706.
+[17 <./runtime-performance.pdf>]) [18]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 769.
  (./main.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 706.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 706.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 769.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 769.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: D4E0551DF02F3F23306299B68936460F;2288.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right .
-
-
+(rerunfilecheck)             Checksum: 9A9A87EC5E00D8BE29239DCF2379823D;2368.
  ) 
 Here is how much of TeX's memory you used:
- 27574 strings out of 493117
- 515591 string characters out of 6135433
- 596838 words of memory out of 5000000
- 30345 multiletter control sequences out of 15000+600000
+ 27623 strings out of 493117
+ 516629 string characters out of 6135433
+ 606840 words of memory out of 5000000
+ 30382 multiletter control sequences out of 15000+600000
  20128 words of font info for 76 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 62i,16n,56p,10345b,588s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 62i,16n,56p,10341b,690s stack positions out of 5000i,500n,10000p,200000b,80000s
 pdfTeX warning (dest): name{figure.3-footnote.\\protect\040$\\relax\040*$\\pr
 otect\040$\\relax\040*$} has been referenced but does not exist, replaced by a 
 fixed one
@@ -1770,10 +1589,10 @@ msfonts/cm/cmti9.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/ams
 fonts/cm/cmtt10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsf
 onts/symbols/msbm10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/urw/ncn
 trsbk/uncr8a.pfb>
-Output written on main.pdf (16 pages, 2407072 bytes).
+Output written on main.pdf (18 pages, 2742032 bytes).
 PDF statistics:
- 1078 PDF objects out of 1200 (max. 8388607)
- 950 compressed objects within 10 object streams
- 238 named destinations out of 1000 (max. 500000)
- 308 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1192 PDF objects out of 1200 (max. 8388607)
+ 1050 compressed objects within 11 object streams
+ 249 named destinations out of 1000 (max. 500000)
+ 321 words of extra memory for PDF output out of 10000 (max. 10000000)
 
