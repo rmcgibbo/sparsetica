@@ -1,0 +1,132 @@
+This is BibTeX, Version 0.99d (TeX Live 2014)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: diff.aux
+White space in argument---line 32 of file diff.aux
+ : \citation{Note\protect
+ :                        $\relax *$}
+I'm skipping whatever remains of this command
+White space in argument---line 37 of file diff.aux
+ : \citation{Note\protect
+ :                        $\relax \dagger $}
+I'm skipping whatever remains of this command
+White space in argument---line 81 of file diff.aux
+ : \citation{Note\protect
+ :                        $\relax \ddagger $}
+I'm skipping whatever remains of this command
+White space in argument---line 96 of file diff.aux
+ : \citation{Note\protect
+ :                        $\relax \mathsection $}
+I'm skipping whatever remains of this command
+White space in argument---line 104 of file diff.aux
+ : \citation{Note\protect
+ :                        $\relax \mathsection $}
+I'm skipping whatever remains of this command
+White space in argument---line 132 of file diff.aux
+ : \citation{Note\protect
+ :                        $\relax \mathsection $}
+I'm skipping whatever remains of this command
+White space in argument---line 195 of file diff.aux
+ : \citation{Note\protect
+ :                        $\relax \mathparagraph $}
+I'm skipping whatever remains of this command
+White space in argument---line 196 of file diff.aux
+ : \citation{Note\protect
+ :                        $\relax *$\protect $\relax *$}
+I'm skipping whatever remains of this command
+The style file: aipnum4-1.bst
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+Database file #1: diffNotes.bib
+I was expecting a `,' or a `}'---line 1 of file diffNotes.bib
+ : @footnote{Note\protect 
+ :                        \ensuremath  {*},key="Note\protect \ensuremath  {*}",note="For systems that evolve under Langevin dynamics, the operator is a backward Fokker-Planck operator.\cite {coifman2008diffusion} For a discrete-time reversible Markov chain like thermostated Hamiltonian dynamics integrated with a finite-timestep integrator, the associated operator is a backward transfer operator.\cite {schutte2001transfer}"}
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 2 of file diffNotes.bib
+ : @footnote{Note\protect 
+ :                        \ensuremath  {\dagger },key="Note\protect \ensuremath  {\dagger }",note="We use the phrase `phase space' to refer to either a position, momenta phase space, or a position-only configuration space, depending on the underlying dynamics. For thermostatted Hamiltonian or Langevin dynamics, $\Omega =\protect \mathbb  {R}^{6N}$, where $N$ is the number of atoms. For overdamped Langevin dynamics, also called Brownian or Smoluchowski dynamics, $\Omega =\protect \mathbb  {R}^{3N}$. In periodic boundary conditions, the position space is some $3N$-dimensional torus, but the exact definition of $\Omega $ is not critical for our purposes."}
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 3 of file diffNotes.bib
+ : @footnote{Note\protect 
+ :                        \ensuremath  {\ddagger },key="Note\protect \ensuremath  {\ddagger }",note="For example, if the underlying dynamics are overdamped Langevin on a potential energy function $U(x)$ in units of $kT$ with unit diffusion constant, simulated using an Euler-Maruyama integrator with a unit time step, the stochastic transition density kernel, $p(x, y)dy$, would be the probability density function of a Gaussian distribution with mean $\protect \mathaccentV {bar}016{y}=x-\nabla U(x)$ and variance $\sigma ^2=2$."}
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 4 of file diffNotes.bib
+ : @footnote{Note\protect 
+ :                        \ensuremath  {\mathsection },key="Note\protect \ensuremath  {\mathsection }",note="{\protect \color {red}\protect \sout  {To be concrete, set $a_1 = 0$, and choose $a_2$ and $a_3$ to satisfy $a_2 \delimiter "426830A \psi _2 | q \delimiter "526930B _\mu = - a_3 \delimiter "426830A \psi _3 | q \delimiter "526930B _\mu $ and $a_2^2 + a_3^2 = 1$.}}"}
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 5 of file diffNotes.bib
+ : @footnote{Note\protect 
+ :                        \ensuremath  {\mathsection },key="Note\protect \ensuremath  {\mathsection }",note="{\protect \color {red}\protect \sout  {To demonstrate that $E[\psi _2] = \lambda _3^{2t}$, note that for this choice of $q$ and $f(t/\tau )$, $\protect \mathaccentV {tilde}07E{\protect \mathcal  {T}}(t)$ is equal to the sum of the first two terms in the spectral decomposition of $\protect \mathcal  {T}(t)$. The squared spectral norm of the difference between the two operators is the square of the largest eigenvalue of the difference operator. The first two eigenpairs having been subtracted out, the square of the largest remaining eigenvalue is $\lambda _3^{2t}$.}}"}
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 6 of file diffNotes.bib
+ : @footnote{Note\protect 
+ :                        \ensuremath  {\mathsection },key="Note\protect \ensuremath  {\mathsection }",note="At this point, we switch the notation slightly for clarity of presentation. $\protect \mathbf  {x} \in \protect \mathbb  {R}^m$ will be the vector of sparse tICA expansion coefficients being optimized, and we take the $t$-dependence of $\protect \mathbf  {C}(t)$ to be implicit, so we simply use the notation $\protect \mathbf  {C}$."}
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 7 of file diffNotes.bib
+ : @footnote{Note\protect 
+ :                        \ensuremath  {\mathparagraph },key="Note\protect \ensuremath  {\mathparagraph }",note="{\protect \color {blue}\protect \uwave  {To be concrete, set $a_1 = 0$, and choose $a_2$ and $a_3$ to satisfy $a_2 \delimiter "426830A \psi _2 | q \delimiter "526930B _\mu = - a_3 \delimiter "426830A \psi _3 | q \delimiter "526930B _\mu $ and $a_2^2 + a_3^2 = 1$.}}"}
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 8 of file diffNotes.bib
+ : @footnote{Note\protect 
+ :                        \ensuremath  {*}\protect \ensuremath  {*},key="Note\protect \ensuremath  {*}\protect \ensuremath  {*}",note="{\protect \color {blue}\protect \uwave  {To demonstrate that $E[\psi _2] = \lambda _3^{2t}$, note that for this choice of $q$ and $f(t/\tau )$, $\protect \mathaccentV {tilde}07E{\protect \mathcal  {T}}(t)$ is equal to the sum of the first two terms in the spectral decomposition of $\protect \mathcal  {T}(t)$. The squared spectral norm of the difference between the two operators is the square of the largest eigenvalue of the difference operator. The first two eigenpairs having been subtracted out, the square of the largest remaining eigenvalue is $\lambda _3^{2t}$.}}"}
+I'm skipping whatever remains of this entry
+Database file #2: references.bib
+control{REVTEX41Control}, control.key{N/A}, control.author{N/A}, control.editor{N/A}, control.title{N/A}, control.pages{N/A}, control.year{N/A}, control.eprint{N/A}, 
+control{aip41Control}, control.key{N/A}, control.author{N/A}, control.editor{N/A}, control.title{}, control.pages{0}, control.year{N/A}, control.eprint{N/A}, 
+Warning--jnrlst (dependency: not reversed) set 1
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+merlin.mbs aipnum4-1.bst 2010-07-25 4.21a (PWD, AO, DPC) hacked
+Control: key (0) 
+Control: author (8) initials jnrlst
+Control: editor formatted (1) identically to author
+Control: production of article title (-1) disabled
+Control: page (0) single
+Control: year (1) truncated
+Control: production of eprint (0) enabled
+Warning--empty note in o2013operator
+You've used 105 entries,
+            5918 wiz_defined-function locations,
+            2402 strings with 37295 characters,
+and the built_in function-call counts, 101332 in all, are:
+= -- 6632
+> -- 3149
+< -- 604
++ -- 1011
+- -- 795
+* -- 15253
+:= -- 10696
+add.period$ -- 104
+call.type$ -- 105
+change.case$ -- 415
+chr.to.int$ -- 104
+cite$ -- 106
+duplicate$ -- 9170
+empty$ -- 7285
+format.name$ -- 1599
+if$ -- 19971
+int.to.chr$ -- 2
+int.to.str$ -- 112
+missing$ -- 1223
+newline$ -- 361
+num.names$ -- 309
+pop$ -- 3927
+preamble$ -- 1
+purify$ -- 515
+quote$ -- 0
+skip$ -- 3609
+stack$ -- 0
+substring$ -- 2479
+swap$ -- 8788
+text.length$ -- 291
+text.prefix$ -- 0
+top$ -- 10
+type$ -- 1428
+warning$ -- 2
+while$ -- 405
+width$ -- 0
+write$ -- 871
+(There were 16 error messages)

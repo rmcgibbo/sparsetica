@@ -1,0 +1,33 @@
+\BOOKMARK [0][-]{section*.2}{Identification of simple reaction coordinates from complex dynamics}{}% 2
+\BOOKMARK [1][-]{section*.1}{Abstract}{section*.2}% 1
+\BOOKMARK [1][-]{section*.3}{Introduction}{section*.2}% 3
+\BOOKMARK [1][-]{section*.4}{Defining the natural reaction coordinate}{section*.2}% 4
+\BOOKMARK [2][-]{section*.5}{A dimensionality reduction from \040to R}{section*.4}% 5
+\BOOKMARK [2][-]{section*.6}{Uniquely determined by the dynamics}{section*.4}% 6
+\BOOKMARK [2][-]{section*.7}{Maximally predictive projection}{section*.4}% 7
+\BOOKMARK [2][-]{section*.8}{Alternative Definitions}{section*.4}% 8
+\BOOKMARK [1][-]{section*.9}{A dominant eigenfunction is the natural reaction coordinate}{section*.2}% 9
+\BOOKMARK [2][-]{section*.10}{Preliminaries}{section*.9}% 10
+\BOOKMARK [2][-]{section*.11}{The error functional}{section*.9}% 11
+\BOOKMARK [2][-]{section*.12}{Continuous-time Markov processes}{section*.9}% 12
+\BOOKMARK [2][-]{section*.13}{Multiple reaction coordinates}{section*.9}% 13
+\BOOKMARK [2][-]{section*.14}{Two-dimensional example}{section*.9}% 14
+\BOOKMARK [1][-]{section*.15}{The tICA approximator}{section*.2}% 15
+\BOOKMARK [1][-]{section*.16}{A sparse approximator for the dominant eigenfunction}{section*.2}% 16
+\BOOKMARK [1][-]{section*.17}{An ADMM solver for the QCQP subproblem}{section*.2}% 17
+\BOOKMARK [2][-]{section*.18}{ADMM x update}{section*.17}% 18
+\BOOKMARK [2][-]{section*.19}{ADMM z update}{section*.17}% 19
+\BOOKMARK [2][-]{section*.20}{Further orthogonal reaction coordinates}{section*.17}% 20
+\BOOKMARK [2][-]{section*.21}{Hyperparameter selection and implementation notes}{section*.17}% 21
+\BOOKMARK [1][-]{section*.22}{Examples}{section*.2}% 22
+\BOOKMARK [2][-]{section*.23}{Torsional reaction coordinate}{section*.22}% 23
+\BOOKMARK [2][-]{section*.24}{Bovine pancreatic trypsin inhibitor \(BPTI\)}{section*.22}% 24
+\BOOKMARK [2][-]{section*.25}{Folding of a three-helix bundle}{section*.22}% 25
+\BOOKMARK [1][-]{section*.26}{Conclusions}{section*.2}% 26
+\BOOKMARK [1][-]{section*.27}{Acknowledgments}{section*.2}% 27
+\BOOKMARK [1][-]{section*.28}{Analysis of the error functional}{section*.2}% 28
+\BOOKMARK [1][-]{section*.29}{Covariance matrix estimation}{section*.2}% 29
+\BOOKMARK [1][-]{section*.30}{Projection of point onto an ellipsoid}{section*.2}% 30
+\BOOKMARK [1][-]{section*.31}{Runtime performance}{section*.2}% 31
+\BOOKMARK [1][-]{section*.32}{References}{section*.2}% 32
+\BOOKMARK [1][-]{section*.33}{References}{section*.2}% 33
