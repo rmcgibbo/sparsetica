@@ -1,4 +1,8 @@
-\documentclass[aip, jcp, reprint, nolinenumbers, twocolumn, nobalancelastpage, nofootinbib]{revtex4-1}
+%\documentclass[aip, jcp, reprint, nolinenumbers, twocolumn, nobalancelastpage, nofootinbib]{revtex4-1}
+\documentclass[aip, jcp, preprint, linenumbers, nofootinbib]{revtex4-1}
+%DIF LATEXDIFF DIFFERENCE FILE
+%DIF DEL orig.tex   Mon Jan  2 11:09:27 2017
+%DIF ADD main.tex   Mon Jan  2 11:17:55 2017
 
 \usepackage{todonotes}
 \usepackage{soul}
@@ -61,6 +65,30 @@
 \newtheorem{theorem}{Theorem}
 \newtheorem{lemma}[theorem]{Lemma}
 %\parfillskip 0pt plus 0.25\textwidth
+%DIF PREAMBLE EXTENSION ADDED BY LATEXDIFF
+%DIF UNDERLINE PREAMBLE %DIF PREAMBLE
+\RequirePackage[normalem]{ulem} %DIF PREAMBLE
+\RequirePackage{color}\definecolor{RED}{rgb}{1,0,0}\definecolor{BLUE}{rgb}{0,0,1} %DIF PREAMBLE
+\providecommand{\DIFaddtex}[1]{{\protect\color{blue}\uwave{#1}}} %DIF PREAMBLE
+\providecommand{\DIFdeltex}[1]{{\protect\color{red}\sout{#1}}}                      %DIF PREAMBLE
+%DIF SAFE PREAMBLE %DIF PREAMBLE
+\providecommand{\DIFaddbegin}{} %DIF PREAMBLE
+\providecommand{\DIFaddend}{} %DIF PREAMBLE
+\providecommand{\DIFdelbegin}{} %DIF PREAMBLE
+\providecommand{\DIFdelend}{} %DIF PREAMBLE
+%DIF FLOATSAFE PREAMBLE %DIF PREAMBLE
+\providecommand{\DIFaddFL}[1]{\DIFadd{#1}} %DIF PREAMBLE
+\providecommand{\DIFdelFL}[1]{\DIFdel{#1}} %DIF PREAMBLE
+\providecommand{\DIFaddbeginFL}{} %DIF PREAMBLE
+\providecommand{\DIFaddendFL}{} %DIF PREAMBLE
+\providecommand{\DIFdelbeginFL}{} %DIF PREAMBLE
+\providecommand{\DIFdelendFL}{} %DIF PREAMBLE
+%DIF END PREAMBLE EXTENSION ADDED BY LATEXDIFF
+%DIF PREAMBLE EXTENSION ADDED BY LATEXDIFF
+%DIF HYPERREF PREAMBLE %DIF PREAMBLE
+\providecommand{\DIFadd}[1]{\texorpdfstring{\DIFaddtex{#1}}{#1}} %DIF PREAMBLE
+\providecommand{\DIFdel}[1]{\texorpdfstring{\DIFdeltex{#1}}{}} %DIF PREAMBLE
+%DIF END PREAMBLE EXTENSION ADDED BY LATEXDIFF
 
 \begin{document}
 \title{Identification of simple reaction coordinates from complex dynamics}
@@ -186,7 +214,7 @@ E_{p_0}[q] &= ||p_t(x) - \tilde{p}_t(x)||_{\mu^{-1}}^2 \nonumber \\
 
 Note that this error depends on the arbitrary initial distribution. To remove this dependency, we consider the worst-case error by maximizing over all possible initial distributions,
 \begin{align}
-E[q] &= \max_{p_0} E_{p_0}[q], \\
+E[q] &= \max_{p_0} E_{p_0}[q], \DIFaddbegin \label{eq:maxprobdens}\DIFaddend \\
 q^* &= \argmin_q E[q]. \label{eq:defn}
 \end{align}
 
@@ -305,14 +333,14 @@ First, observe that the form of the prediction about the future state of the sys
 
 \noindent{}The approximate transfer operator, $\tilde{\mathcal{T}}(t)$, is rank 2; it has two non-zero eigenvalues, $1$ and $f(t/\tau)$, with associated eigenfunctions $1$ and $q(x)$ respectively.
 
-Next, we rewrite the error the error functional, \cref{eq:e_q0_q} in $u$-notation as well,
+Next, we rewrite the error \DIFdelbegin \DIFdel{the error }\DIFdelend functional, \cref{eq:e_q0_q} in $u$-notation as well,
 \begin{align}
 E_{u_0}[q] &=  \int_\Omega dx\; \mu(x) (u_t(x) - \tilde{u}_t(x))^2 \\
 &= || (\mathcal{T}(t) - \tilde{\mathcal{T}}(t)) \circ u_0 ||_\mu^2 \\
 \label{eq:error_functional}
 E[q] &= \max_{u_0} || (\mathcal{T}(t) - \tilde{\mathcal{T}}(t)) \circ u_0 ||_\mu^2,
 \end{align}
-where the maximum is understood to be taken over properly normalized $u_0$, $||u_0||_\mu = 1$. 
+where the maximum is understood to be taken over properly normalized $u_0$, $||u_0||_\mu = 1$ \DIFaddbegin \DIFadd{instead of over probability densities as in }\cref{eq:maxprobdens}\DIFaddend . 
 
 It follows, and is proven in Appendix~\ref{appendix:error}, that $\psi_2 = \min_q E[q]$ and that $f(t/\tau)$ can be written as $f(t/\tau) = e^{-t/\tau}$. Because it is the minimizer of $E[q]$, $\psi_2$ is the natural reaction coordinate.
 

@@ -6,7 +6,7 @@
 %Control: page (0) single
 %Control: year (1) truncated
 %Control: production of eprint (0) enabled
-\begin{thebibliography}{103}%
+\begin{thebibliography}{109}%
 \makeatletter
 \providecommand \@ifxundefined [1]{%
  \@ifx{#1\undefined}
@@ -216,28 +216,14 @@
   {No{\'e}}},\ }\href {\doibase 10.1063/1.4811489} {\bibfield  {journal}
   {\bibinfo  {journal} {J. Chem. Phys.}\ }\textbf {\bibinfo {volume} {139}},\
   \bibinfo {pages} {015102} (\bibinfo {year} {2013})}\BibitemShut {NoStop}%
-\bibitem [{\citenamefont {Coifman}\ \emph {et~al.}(2008)\citenamefont
-  {Coifman}, \citenamefont {Kevrekidis}, \citenamefont {Lafon}, \citenamefont
-  {Maggioni},\ and\ \citenamefont {Nadler}}]{coifman2008diffusion}%
+\bibitem [{Note1()}]{Note1}%
   \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {R.~R.}\ \bibnamefont
-  {Coifman}}, \bibinfo {author} {\bibfnamefont {I.~G.}\ \bibnamefont
-  {Kevrekidis}}, \bibinfo {author} {\bibfnamefont {S.}~\bibnamefont {Lafon}},
-  \bibinfo {author} {\bibfnamefont {M.}~\bibnamefont {Maggioni}}, \ and\
-  \bibinfo {author} {\bibfnamefont {B.}~\bibnamefont {Nadler}},\ }\href@noop {}
-  {\bibfield  {journal} {\bibinfo  {journal} {Multiscale Modeling \&
-  Simulation}\ }\textbf {\bibinfo {volume} {7}},\ \bibinfo {pages} {842}
-  (\bibinfo {year} {2008})}\BibitemShut {NoStop}%
-\bibitem [{\citenamefont {Sch{\"u}tte}, \citenamefont {Huisinga},\ and\
-  \citenamefont {Deuflhard}(2001)}]{schutte2001transfer}%
-  \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {C.}~\bibnamefont
-  {Sch{\"u}tte}}, \bibinfo {author} {\bibfnamefont {W.}~\bibnamefont
-  {Huisinga}}, \ and\ \bibinfo {author} {\bibfnamefont {P.}~\bibnamefont
-  {Deuflhard}},\ }\href {\doibase 10.1007/978-3-642-56589-2_9} {\emph {\bibinfo
-  {title} {Transfer Operator Approach to Conformational Dynamics in
-  Biomolecular Systems}}}\ (\bibinfo  {publisher} {Springer},\ \bibinfo {year}
-  {2001})\BibitemShut {NoStop}%
+  \bibinfo {note} {For systems that evolve under Langevin dynamics, the
+  operator is a backward Fokker-Planck operator.\cite {coifman2008diffusion}
+  For a discrete-time reversible Markov chain like thermostated Hamiltonian
+  dynamics integrated with a finite-timestep integrator, the associated
+  operator is a backward transfer operator.\cite
+  {schutte2001transfer}}\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Fukui}(1970)}]{fukui1970formulation}%
   \BibitemOpen
   \bibfield  {author} {\bibinfo {author} {\bibfnamefont {K.}~\bibnamefont
@@ -338,6 +324,17 @@
   }\href {\doibase 10.1002/0471231509.ch1} {\bibfield  {journal} {\bibinfo
   {journal} {Adv. Chem. Phys.}\ }\textbf {\bibinfo {volume} {123}} (\bibinfo
   {year} {2002}),\ 10.1002/0471231509.ch1}\BibitemShut {NoStop}%
+\bibitem [{Note2()}]{Note2}%
+  \BibitemOpen
+  \bibinfo {note} {We use the phrase `phase space' to refer to either a
+  position, momenta phase space, or a position-only configuration space,
+  depending on the underlying dynamics. For thermostatted Hamiltonian or
+  Langevin dynamics, $\Omega =\protect \mathbb {R}^{6N}$, where $N$ is the
+  number of atoms. For overdamped Langevin dynamics, also called Brownian or
+  Smoluchowski dynamics, $\Omega =\protect \mathbb {R}^{3N}$. In periodic
+  boundary conditions, the position space is some $3N$-dimensional torus, but
+  the exact definition of $\Omega $ is not critical for our
+  purposes.}\BibitemShut {Stop}%
 \bibitem [{\citenamefont {Natanson}\ \emph {et~al.}(1991)\citenamefont
   {Natanson}, \citenamefont {Garrett}, \citenamefont {Truong}, \citenamefont
   {Joseph},\ and\ \citenamefont {Truhlar}}]{natanson1991definition}%
@@ -612,6 +609,25 @@
   {\doibase 10.1021/acs.jctc.5b00749} {\bibfield  {journal} {\bibinfo
   {journal} {J. Chem. Theory Comput.}\ }\textbf {\bibinfo {volume} {11}},\
   \bibinfo {pages} {5947} (\bibinfo {year} {2015})}\BibitemShut {NoStop}%
+\bibitem [{Note3()}]{Note3}%
+  \BibitemOpen
+  \bibinfo {note} {For example, if the underlying dynamics are overdamped
+  Langevin on a potential energy function $U(x)$ in units of $kT$ with unit
+  diffusion constant, simulated using an Euler-Maruyama integrator with a unit
+  time step, the stochastic transition density kernel, $p(x, y)dy$, would be
+  the probability density function of a Gaussian distribution with mean
+  $\protect \mathaccentV {bar}016{y}=x-\nabla U(x)$ and variance $\sigma
+  ^2=2$.}\BibitemShut {Stop}%
+\bibitem [{\citenamefont {Sch{\"u}tte}, \citenamefont {Huisinga},\ and\
+  \citenamefont {Deuflhard}(2001)}]{schutte2001transfer}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {C.}~\bibnamefont
+  {Sch{\"u}tte}}, \bibinfo {author} {\bibfnamefont {W.}~\bibnamefont
+  {Huisinga}}, \ and\ \bibinfo {author} {\bibfnamefont {P.}~\bibnamefont
+  {Deuflhard}},\ }\href {\doibase 10.1007/978-3-642-56589-2_9} {\emph {\bibinfo
+  {title} {Transfer Operator Approach to Conformational Dynamics in
+  Biomolecular Systems}}}\ (\bibinfo  {publisher} {Springer},\ \bibinfo {year}
+  {2001})\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Prinz}\ \emph {et~al.}(2011)\citenamefont {Prinz},
   \citenamefont {Wu}, \citenamefont {Sarich}, \citenamefont {Keller},
   \citenamefont {Senne}, \citenamefont {Held}, \citenamefont {Chodera},
@@ -658,6 +674,18 @@
   {Pande}},\ }\href {\doibase 10.1021/ar5002999} {\bibfield  {journal}
   {\bibinfo  {journal} {Acc. Chem. Res.}\ }\textbf {\bibinfo {volume} {48}},\
   \bibinfo {pages} {414} (\bibinfo {year} {2015})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Coifman}\ \emph {et~al.}(2008)\citenamefont
+  {Coifman}, \citenamefont {Kevrekidis}, \citenamefont {Lafon}, \citenamefont
+  {Maggioni},\ and\ \citenamefont {Nadler}}]{coifman2008diffusion}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {R.~R.}\ \bibnamefont
+  {Coifman}}, \bibinfo {author} {\bibfnamefont {I.~G.}\ \bibnamefont
+  {Kevrekidis}}, \bibinfo {author} {\bibfnamefont {S.}~\bibnamefont {Lafon}},
+  \bibinfo {author} {\bibfnamefont {M.}~\bibnamefont {Maggioni}}, \ and\
+  \bibinfo {author} {\bibfnamefont {B.}~\bibnamefont {Nadler}},\ }\href@noop {}
+  {\bibfield  {journal} {\bibinfo  {journal} {Multiscale Modeling \&
+  Simulation}\ }\textbf {\bibinfo {volume} {7}},\ \bibinfo {pages} {842}
+  (\bibinfo {year} {2008})}\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Schwantes}\ and\ \citenamefont
   {Pande}(2015)}]{shwantes2015modeling}%
   \BibitemOpen
@@ -748,6 +776,13 @@
   {journal} {\bibinfo  {journal} {J. Optim. Theory Appl.}\ }\textbf {\bibinfo
   {volume} {103}},\ \bibinfo {pages} {1} (\bibinfo {year} {1999})}\BibitemShut
   {NoStop}%
+\bibitem [{Note4()}]{Note4}%
+  \BibitemOpen
+  \bibinfo {note} {At this point, we switch the notation slightly for clarity
+  of presentation. $\protect \mathbf {x} \in \protect \mathbb {R}^m$ will be
+  the vector of sparse tICA expansion coefficients being optimized, and we take
+  the $t$-dependence of $\protect \mathbf {C}(t)$ to be implicit, so we simply
+  use the notation $\protect \mathbf {C}$.}\BibitemShut {Stop}%
 \bibitem [{\citenamefont {Boyd}\ \emph {et~al.}(2011)\citenamefont {Boyd},
   \citenamefont {Parikh}, \citenamefont {Chu}, \citenamefont {Peleato},\ and\
   \citenamefont {Eckstein}}]{boyd2011distributed}%
@@ -880,6 +915,22 @@
   {\doibase 10.1016/j.sbi.2004.01.013} {\bibfield  {journal} {\bibinfo
   {journal} {Science}\ }\textbf {\bibinfo {volume} {334}},\ \bibinfo {pages}
   {517} (\bibinfo {year} {2011})}\BibitemShut {NoStop}%
+\bibitem [{Note5()}]{Note5}%
+  \BibitemOpen
+  \bibinfo {note} {To be concrete, set $a_1 = 0$, and choose $a_2$ and $a_3$ to
+  satisfy \protect {$a_2 \delimiter "426830A \psi _2 | q \delimiter "526930B
+  _\mu = - a_3 \delimiter "426830A \psi _3 | q \delimiter "526930B _\mu $ and
+  $a_2^2 + a_3^2 = 1$}.}\BibitemShut {Stop}%
+\bibitem [{Note6()}]{Note6}%
+  \BibitemOpen
+  \bibinfo {note} {To demonstrate that $E[\psi _2] = \lambda _3^{2t}$, note
+  that for this choice of $q$ and $f(t/\tau )$, $\protect \mathaccentV
+  {tilde}07E{\protect \mathcal {T}}(t)$ is equal to the sum of the first two
+  terms in the spectral decomposition of $\protect \mathcal {T}(t)$. The
+  squared spectral norm of the difference between the two operators is the
+  square of the largest eigenvalue of the difference operator. The first two
+  eigenpairs having been subtracted out, the square of the largest remaining
+  eigenvalue is $\lambda _3^{2t}$.}\BibitemShut {Stop}%
 \bibitem [{\citenamefont {Eckart}\ and\ \citenamefont
   {Young}(1936)}]{eckart1936approximation}%
   \BibitemOpen

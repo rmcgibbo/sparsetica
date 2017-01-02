@@ -1,4 +1,5 @@
-\documentclass[aip, jcp, reprint, nolinenumbers, twocolumn, nobalancelastpage, nofootinbib]{revtex4-1}
+%\documentclass[aip, jcp, reprint, nolinenumbers, twocolumn, nobalancelastpage, nofootinbib]{revtex4-1}
+\documentclass[aip, jcp, reprint, nolinenumbers, twocolumn, nobalancelastpage]{revtex4-1}
 
 \usepackage{todonotes}
 \usepackage{soul}
@@ -30,26 +31,26 @@
 \newcommand{\vech}{\operatorname{vech}}
 \renewcommand{\algorithmicensure}{\textbf{Let:}}
 
-\usepackage{alphalph}
-\makeatletter
-\newcommand*{\fnsymbolsingle}[1]{%
-  \ensuremath{%
-    \ifcase#1%
-    \or *%
-    \or \dagger
-    \or \ddagger
-    \or \mathsection
-    \or \mathparagraph
-    \else
-      \@ctrerr
-    \fi
-  }%
-}
-\makeatother
-\newalphalph{\fnsymbolmult}[mult]{\fnsymbolsingle}{}
-\renewcommand*{\thefootnote}{%
-  \fnsymbolmult{\value{footnote}}%
-}
+% \usepackage{alphalph}
+% \makeatletter
+% \newcommand*{\fnsymbolsingle}[1]{%
+%   \ensuremath{%
+%     \ifcase#1%
+%     \or *%
+%     \or \dagger
+%     \or \ddagger
+%     \or \mathsection
+%     \or \mathparagraph
+%     \else
+%       \@ctrerr
+%     \fi
+%   }%
+% }
+% \makeatother
+% \newalphalph{\fnsymbolmult}[mult]{\fnsymbolsingle}{}
+% \renewcommand*{\thefootnote}{%
+%   \fnsymbolmult{\value{footnote}}%
+% }
 
 
 \DeclareMathOperator{\Tr}{Tr}
@@ -186,7 +187,7 @@ E_{p_0}[q] &= ||p_t(x) - \tilde{p}_t(x)||_{\mu^{-1}}^2 \nonumber \\
 
 Note that this error depends on the arbitrary initial distribution. To remove this dependency, we consider the worst-case error by maximizing over all possible initial distributions,
 \begin{align}
-E[q] &= \max_{p_0} E_{p_0}[q], \\
+E[q] &= \max_{p_0} E_{p_0}[q], \label{eq:maxprobdens}\\
 q^* &= \argmin_q E[q]. \label{eq:defn}
 \end{align}
 
@@ -305,14 +306,14 @@ First, observe that the form of the prediction about the future state of the sys
 
 \noindent{}The approximate transfer operator, $\tilde{\mathcal{T}}(t)$, is rank 2; it has two non-zero eigenvalues, $1$ and $f(t/\tau)$, with associated eigenfunctions $1$ and $q(x)$ respectively.
 
-Next, we rewrite the error the error functional, \cref{eq:e_q0_q} in $u$-notation as well,
+Next, we rewrite the error functional, \cref{eq:e_q0_q} in $u$-notation as well,
 \begin{align}
 E_{u_0}[q] &=  \int_\Omega dx\; \mu(x) (u_t(x) - \tilde{u}_t(x))^2 \\
 &= || (\mathcal{T}(t) - \tilde{\mathcal{T}}(t)) \circ u_0 ||_\mu^2 \\
 \label{eq:error_functional}
 E[q] &= \max_{u_0} || (\mathcal{T}(t) - \tilde{\mathcal{T}}(t)) \circ u_0 ||_\mu^2,
 \end{align}
-where the maximum is understood to be taken over properly normalized $u_0$, $||u_0||_\mu = 1$. 
+where the maximum is understood to be taken over properly normalized $u_0$, $||u_0||_\mu = 1$ instead of over probability densities as in \cref{eq:maxprobdens}. 
 
 It follows, and is proven in Appendix~\ref{appendix:error}, that $\psi_2 = \min_q E[q]$ and that $f(t/\tau)$ can be written as $f(t/\tau) = e^{-t/\tau}$. Because it is the minimizer of $E[q]$, $\psi_2$ is the natural reaction coordinate.
 
@@ -631,7 +632,7 @@ The authors thank Thomas J. Lane for helpful discussions made during the prepara
 \section{Analysis of the error functional}
 \label{appendix:error}
 
-To prove by why $\psi_2 = \min_q E[q]$, (Eqn.~\ref{eq:error_functional}), observe that for any $q$, there exists a function $v(x)$ in the span of the first three eigenfunctions of $\mathcal{T}$, $v=a_1 \psi_1+ a_2 \psi_2 + a_3 \psi_3$, which is normalized, $\langle v | v \rangle_\mu = 1$, and which is in the null space of $\tilde{\mathcal{T}}$, $\tilde{\mathcal{T}} \circ v = 0$.\footnote{To be concrete, set $a_1 = 0$, and choose $a_2$ and $a_3$ to satisfy $a_2 \langle \psi_2 | q \rangle_\mu  = - a_3 \langle \psi_3 | q \rangle_\mu$ and $a_2^2 + a_3^2 = 1$.} Since $E[q]$ is the maximum of $E_{\mu_0}[q]$ over all possible $\mu_0$, it also must be greater than the error incurred for this particular starting distribution, $\mu_0=v$. Thus,
+To prove by why $\psi_2 = \min_q E[q]$, (Eqn.~\ref{eq:error_functional}), observe that for any $q$, there exists a function $v(x)$ in the span of the first three eigenfunctions of $\mathcal{T}$, $v=a_1 \psi_1+ a_2 \psi_2 + a_3 \psi_3$, which is normalized, $\langle v | v \rangle_\mu = 1$, and which is in the null space of $\tilde{\mathcal{T}}$, $\tilde{\mathcal{T}} \circ v = 0$.\footnote{To be concrete, set $a_1 = 0$, and choose $a_2$ and $a_3$ to satisfy \protect{$a_2 \langle \psi_2 | q \rangle_\mu  = - a_3 \langle \psi_3 | q \rangle_\mu$ and $a_2^2 + a_3^2 = 1$}.} Since $E[q]$ is the maximum of $E_{\mu_0}[q]$ over all possible $\mu_0$, it also must be greater than the error incurred for this particular starting distribution, $\mu_0=v$. Thus,
 \begin{align}
 E[q] &\geq || (\mathcal{T}(t) - \tilde{\mathcal{T}}(t)) \circ v ||_\mu^2 \\
 &= || \mathcal{T}(t) \circ v ||_\mu^2 \\
