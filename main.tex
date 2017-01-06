@@ -1,4 +1,5 @@
-\documentclass[aip, jcp, reprint, nolinenumbers, twocolumn, nobalancelastpage, nofootinbib]{revtex4-1}
+%\documentclass[aip, jcp, reprint, nolinenumbers, twocolumn, nobalancelastpage, nofootinbib]{revtex4-1}
+\documentclass[aip, jcp, reprint, nolinenumbers, twocolumn, nobalancelastpage]{revtex4-1}
 
 \usepackage{todonotes}
 \usepackage{soul}
@@ -30,26 +31,26 @@
 \newcommand{\vech}{\operatorname{vech}}
 \renewcommand{\algorithmicensure}{\textbf{Let:}}
 
-\usepackage{alphalph}
-\makeatletter
-\newcommand*{\fnsymbolsingle}[1]{%
-  \ensuremath{%
-    \ifcase#1%
-    \or *%
-    \or \dagger
-    \or \ddagger
-    \or \mathsection
-    \or \mathparagraph
-    \else
-      \@ctrerr
-    \fi
-  }%
-}
-\makeatother
-\newalphalph{\fnsymbolmult}[mult]{\fnsymbolsingle}{}
-\renewcommand*{\thefootnote}{%
-  \fnsymbolmult{\value{footnote}}%
-}
+% \usepackage{alphalph}
+% \makeatletter
+% \newcommand*{\fnsymbolsingle}[1]{%
+%   \ensuremath{%
+%     \ifcase#1%
+%     \or *%
+%     \or \dagger
+%     \or \ddagger
+%     \or \mathsection
+%     \or \mathparagraph
+%     \else
+%       \@ctrerr
+%     \fi
+%   }%
+% }
+% \makeatother
+% \newalphalph{\fnsymbolmult}[mult]{\fnsymbolsingle}{}
+% \renewcommand*{\thefootnote}{%
+%   \fnsymbolmult{\value{footnote}}%
+% }
 
 
 \DeclareMathOperator{\Tr}{Tr}
@@ -73,12 +74,13 @@
 \affiliation{Department of Chemistry, Stanford University, Stanford CA 94305, USA}
 
 \begin{abstract}
-Reaction coordinates are widely used throughout chemical physics to model and understand complex chemical transformations. We introduce a definition of the natural reaction coordinate, suitable for condensed phase and biomolecular systems, as a maximally predictive one-dimensional projection. We then show this criterion is uniquely satisfied by a dominant eigenfunction of an integral operator associated with the ensemble dynamics. We present a new sparse estimator for these eigenfunctions which can search through a large candidate pool of structural order parameters and build simple, interpretable approximations that employ only a small number of these order parameters. Example applications with a small molecule's rotational dynamics and simulations of bovine pancreatic trypsin inhibitor show that this approach can filter through statistical noise to identify simple reaction coordinates from complex dynamics.
+Reaction coordinates are widely used throughout chemical physics to model and understand complex chemical transformations. We introduce a definition of the natural reaction coordinate, suitable for condensed phase and biomolecular systems, as a maximally predictive one-dimensional projection. We then show this criterion is uniquely satisfied by a dominant eigenfunction of an integral operator associated with the ensemble dynamics. We present a new sparse estimator for these eigenfunctions which can search through a large candidate pool of structural order parameters and build simple, interpretable approximations that employ only a small number of these order parameters. Example applications with a small molecule's rotational dynamics and simulations of protein conformational change and folding show that this approach can filter through statistical noise to identify simple reaction coordinates from complex dynamics.
 \end{abstract}
 \keywords{reaction coordinate, molecular dynamics, sparsity}
 \maketitle
 
 % \listoftodos
+% Example applications with a small molecule's rotational dynamics and simulations of bovine pancreatic trypsin inhibitor show that this approach can filter through statistical noise to identify simple reaction coordinates from complex dynamics.
 
 \section{Introduction}
 
@@ -97,7 +99,7 @@ Implicit in the concept is the notion that the measurement of reaction coordinat
  % For more complex processes like protein folding, many physically-motivated coordinates have been used such as the fraction of native amino-acid contacts formed, the root-mean-squared distance from the native state, or the radius of gyration. But these
  %
 
-We recognize that the identification of a system's reaction coordinate(s) is invaluable for physical interpretation of complex molecular systems, that researchers now have access to extremely large data sets of unbiased molecular dynamics (MD) simulations of biologically relevant macromolecules, and that the interpretation of these data is often a major bottleneck.\cite{lane2013milliseconds} We therefore aim to develop a method to use these MD data sets to \emph{infer} accurate and interpretable reaction coordinates. Our approach builds on time-structure based independent components analysis (tICA), a special case of the more general variational approach to conformational dynamics.\cite{schwantes2013improvements, perez2013identification} But these tICA-derived reaction coordinates can be a black box; they are difficult to interpret physically because of their abstract construction as linear combinations of a large number of structural features. In contrast, our new estimator explicitly adds a sparsity consideration into the formulation to filter through statistical noise and identify simple physical reaction coordinates from complex dynamics.
+We recognize that the identification of a system's reaction coordinate(s) is invaluable for physical interpretation of complex molecular systems, that researchers now have access to extremely large data sets of unbiased molecular dynamics simulations of biologically relevant macromolecules, and that the interpretation of these data is often a major bottleneck.\cite{lane2013milliseconds} We therefore aim to develop a method to use these molecular dynamics data sets to \emph{infer} accurate and interpretable reaction coordinates. Our approach builds on time-structure based independent components analysis (tICA), a special case of the more general variational approach to conformational dynamics.\cite{schwantes2013improvements, perez2013identification} But these tICA-derived reaction coordinates can be a black box; they are difficult to interpret physically because of their abstract construction as linear combinations of a large number of structural features. In contrast, our new estimator explicitly adds a sparsity consideration into the formulation to filter through statistical noise and identify simple physical reaction coordinates from complex dynamics.
 
 The structure of this paper is as follows: First, we define the \emph{natural reaction coordinate(s)} based on a set of intuitive mathematical properties that these collective variables should satisfy. After introducing these properties, we discuss their relationship to other commonly used definitions of the reaction coordinate. Next, we prove that this definition is satisfied by the leading eigenfunctions of an integral operator governing the ensemble dynamics.\footnote{For systems that evolve under Langevin dynamics, the operator is a backward Fokker-Planck operator.\cite{coifman2008diffusion} For a discrete-time reversible Markov chain like thermostated Hamiltonian dynamics integrated with a finite-timestep integrator, the associated operator is a backward transfer operator.\cite{schutte2001transfer}} Finally, we introduce and demonstrate a practical new estimator which can approximate these reaction coordinates as extremely sparse, interpretable, regularized linear combinations of structural order parameters.
 
@@ -186,7 +188,7 @@ E_{p_0}[q] &= ||p_t(x) - \tilde{p}_t(x)||_{\mu^{-1}}^2 \nonumber \\
 
 Note that this error depends on the arbitrary initial distribution. To remove this dependency, we consider the worst-case error by maximizing over all possible initial distributions,
 \begin{align}
-E[q] &= \max_{p_0} E_{p_0}[q], \\
+E[q] &= \max_{p_0} E_{p_0}[q], \label{eq:maxprobdens}\\
 q^* &= \argmin_q E[q]. \label{eq:defn}
 \end{align}
 
@@ -226,7 +228,7 @@ We note that others have also defined a reaction coordinate consistent with the 
 
 \section{A dominant eigenfunction is the natural reaction coordinate}
 \label{sect:natureal_reaction}
-In this section, we demonstrate that the natural reaction coordinate, as defined by the minimizer of \cref{eq:defn}, is the second leading eigenfunction of an integral operator associated with a system's Markovian dynamics in $\Omega$. For simplicity, we work here with a discrete-time Markov chain, $\{X_0, X_1, X_2, \ldots \}$, such as a typical all-atom MD simulation with a finite time step integrator, assuming only that the prediction interval $t$ is greater than 1 step (typically on the order of 2 fs). Afterwards, we note why the same results apply if the underlying dynamics are a continuous-time Markov process, and discuss the natural generalization to multiple reaction coordinates.
+In this section, we demonstrate that the natural reaction coordinate, as defined by the minimizer of \cref{eq:defn}, is the second leading eigenfunction of an integral operator associated with a system's Markovian dynamics in $\Omega$. For simplicity, we work here with a discrete-time Markov chain, $\{X_0, X_1, X_2, \ldots \}$, such as a typical all-atom molecular dynamics simulation with a finite time step integrator, assuming only that the prediction interval $t$ is greater than 1 step (typically on the order of 2 fs). Afterwards, we note why the same results apply if the underlying dynamics are a continuous-time Markov process, and discuss the natural generalization to multiple reaction coordinates.
 
 
 
@@ -305,14 +307,14 @@ First, observe that the form of the prediction about the future state of the sys
 
 \noindent{}The approximate transfer operator, $\tilde{\mathcal{T}}(t)$, is rank 2; it has two non-zero eigenvalues, $1$ and $f(t/\tau)$, with associated eigenfunctions $1$ and $q(x)$ respectively.
 
-Next, we rewrite the error the error functional, \cref{eq:e_q0_q} in $u$-notation as well,
+Next, we rewrite the error functional, \cref{eq:e_q0_q} in $u$-notation as well,
 \begin{align}
 E_{u_0}[q] &=  \int_\Omega dx\; \mu(x) (u_t(x) - \tilde{u}_t(x))^2 \\
 &= || (\mathcal{T}(t) - \tilde{\mathcal{T}}(t)) \circ u_0 ||_\mu^2 \\
 \label{eq:error_functional}
 E[q] &= \max_{u_0} || (\mathcal{T}(t) - \tilde{\mathcal{T}}(t)) \circ u_0 ||_\mu^2,
 \end{align}
-where the maximum is understood to be taken over properly normalized $u_0$, $||u_0||_\mu = 1$. 
+where the maximum is understood to be taken over properly normalized $u_0$, $||u_0||_\mu = 1$ instead of over probability densities as in \cref{eq:maxprobdens}. 
 
 It follows, and is proven in Appendix~\ref{appendix:error}, that $\psi_2 = \min_q E[q]$ and that $f(t/\tau)$ can be written as $f(t/\tau) = e^{-t/\tau}$. Because it is the minimizer of $E[q]$, $\psi_2$ is the natural reaction coordinate.
 
@@ -631,7 +633,7 @@ The authors thank Thomas J. Lane for helpful discussions made during the prepara
 \section{Analysis of the error functional}
 \label{appendix:error}
 
-To prove by why $\psi_2 = \min_q E[q]$, (Eqn.~\ref{eq:error_functional}), observe that for any $q$, there exists a function $v(x)$ in the span of the first three eigenfunctions of $\mathcal{T}$, $v=a_1 \psi_1+ a_2 \psi_2 + a_3 \psi_3$, which is normalized, $\langle v | v \rangle_\mu = 1$, and which is in the null space of $\tilde{\mathcal{T}}$, $\tilde{\mathcal{T}} \circ v = 0$.\footnote{To be concrete, set $a_1 = 0$, and choose $a_2$ and $a_3$ to satisfy $a_2 \langle \psi_2 | q \rangle_\mu  = - a_3 \langle \psi_3 | q \rangle_\mu$ and $a_2^2 + a_3^2 = 1$.} Since $E[q]$ is the maximum of $E_{\mu_0}[q]$ over all possible $\mu_0$, it also must be greater than the error incurred for this particular starting distribution, $\mu_0=v$. Thus,
+To prove by why $\psi_2 = \min_q E[q]$, (Eqn.~\ref{eq:error_functional}), observe that for any $q$, there exists a function $v(x)$ in the span of the first three eigenfunctions of $\mathcal{T}$, $v=a_1 \psi_1+ a_2 \psi_2 + a_3 \psi_3$, which is normalized, $\langle v | v \rangle_\mu = 1$, and which is in the null space of $\tilde{\mathcal{T}}$, $\tilde{\mathcal{T}} \circ v = 0$.\footnote{To be concrete, set $a_1 = 0$, and choose $a_2$ and $a_3$ to satisfy \protect{$a_2 \langle \psi_2 | q \rangle_\mu  = - a_3 \langle \psi_3 | q \rangle_\mu$ and $a_2^2 + a_3^2 = 1$}.} Since $E[q]$ is the maximum of $E_{\mu_0}[q]$ over all possible $\mu_0$, it also must be greater than the error incurred for this particular starting distribution, $\mu_0=v$. Thus,
 \begin{align}
 E[q] &\geq || (\mathcal{T}(t) - \tilde{\mathcal{T}}(t)) \circ v ||_\mu^2 \\
 &= || \mathcal{T}(t) \circ v ||_\mu^2 \\
